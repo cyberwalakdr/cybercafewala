@@ -47,11 +47,11 @@
             z-index: -1;
         }
 
-        /* STICKY PORTAL NAVIGATION BAR WITH DROPDOWNS */
+        /* STICKY PORTAL NAVIGATION BAR */
         .sticky-title-bar {
             background: #0f172a;
             color: white;
-            padding: 10px 24px;
+            padding: 12px 24px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -74,84 +74,50 @@
 
         .portal-nav {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
-        }
-
-        /* DROPDOWN NAVIGATION STYLING */
-        .nav-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-trigger {
-            color: #f1f5f9;
-            background: rgba(255,255,255,0.08);
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            border: 1px solid rgba(255,255,255,0.1);
-            display: flex;
             align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
         }
 
-        .dropdown-trigger:hover, .nav-dropdown:hover .dropdown-trigger {
+        .portal-nav a {
+            color: #f1f5f9;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            background: rgba(255,255,255,0.08);
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .portal-nav a:hover {
             background: var(--secondary);
             color: var(--primary);
+            font-weight: 600;
             border-color: var(--secondary);
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #1e293b;
-            min-width: 200px;
-            box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.25);
-            border-radius: 6px;
-            margin-top: 5px;
-            overflow: hidden;
-            border: 1px solid #334155;
-            z-index: 1010;
-        }
-
-        /* Show dropdown on hover */
-        .nav-dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #e2e8f0;
-            padding: 10px 16px;
-            text-decoration: none;
-            display: block;
+        /* PREMIUM LANGUAGE SWITCHER BUTTON */
+        .lang-switch-btn {
+            background: linear-gradient(135deg, var(--secondary) 0%, #e65c00 100%);
+            color: var(--primary);
+            border: none;
+            padding: 6px 16px;
             font-size: 13px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(255, 153, 0, 0.4);
+            transition: all 0.3s ease;
         }
 
-        .dropdown-content a:last-child {
-            border-bottom: none;
-        }
-
-        .dropdown-content a:hover {
-            background-color: var(--primary);
-            color: white;
-            padding-left: 20px;
-        }
-
-        .order-now-btn {
-            background: var(--accent) !important;
-            color: white !important;
-            border-color: var(--accent) !important;
-        }
-        .order-now-btn:hover {
-            background: #b91c1c !important;
-            color: white !important;
+        .lang-switch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 153, 0, 0.6);
         }
 
         /* MEGA IDENTITY BRAND HEADER */
@@ -300,26 +266,8 @@
             border-bottom: none;
         }
 
-        /* CLICKABLE INTERACTIVE ROWS */
-        .clickable-row {
-            cursor: pointer;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .clickable-row:hover {
-            background-color: #f1f5f9 !important;
-            transform: scale(1.01);
-        }
-
-        /* CLICK ANIMATION CLASS */
-        @keyframes rowRipple {
-            0% { background-color: rgba(255, 153, 0, 0.2); }
-            100% { background-color: transparent; }
-        }
-
-        .row-click-active {
-            animation: rowRipple 0.6s ease-out;
+        tr:hover {
+            background-color: #f8fafc;
         }
 
         .fee-pill {
@@ -395,6 +343,7 @@
         }
 
         .dl-icon {
+            color: var(--accent);
             font-size: 1.1rem;
         }
 
@@ -408,7 +357,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 45px;
             border: 1px solid var(--card-border);
-            scroll-margin-top: 80px;
         }
 
         .info-panel {
@@ -458,43 +406,6 @@
             font-weight: 600;
             font-size: 14px;
             color: #334155;
-        }
-
-        /* RADIO BUTTON ENHANCEMENT FOR PAYMENT */
-        .payment-radio-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 8px;
-        }
-
-        .payment-label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #f8fafc;
-            border: 1px solid #cbd5e1;
-            padding: 10px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 600 !important;
-            flex: 1;
-        }
-
-        input[type="radio"] {
-            accent-color: var(--primary);
-            width: 16px;
-            height: 16px;
-        }
-
-        input[type="radio"]:checked + span {
-            color: var(--primary);
-        }
-
-        .payment-label:has(input:checked) {
-            border-color: var(--primary);
-            background: #f0fdf4;
-            box-shadow: 0 0 0 1px var(--primary);
         }
 
         input[type="text"], textarea, select {
@@ -558,7 +469,7 @@
             background-color: #059669;
         }
 
-        .action-button.delete-btn {
+        .delete-btn {
             background-color: var(--accent);
             color: white;
             padding: 8px 12px;
@@ -581,6 +492,21 @@
             background: #0f172a;
         }
 
+        /* PREMIUM DYNAMIC HIGHLIGHTED NOTICE FOR OTP */
+        .otp-notice-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            color: #92400e;
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
         footer {
             background: #0f172a;
             color: white;
@@ -590,105 +516,129 @@
             border-top: 5px solid var(--secondary);
         }
     </style>
+
+    <style>
+        .form-search-box { width: 100%; padding: 12px; margin-bottom: 12px; border: 2px solid #ddd; border-radius: 8px; font-weight: 600; }
+        .forms-portal { max-height: 450px; overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; background: #fafafa; }
+        .form-item { padding: 12px 16px; border-bottom: 1px solid #eee; cursor: pointer; font-size: 14px; font-weight: 600; color: #334155; transition: all 0.2s; }
+        .form-item:hover { background: #fff7ed; color: var(--primary); padding-left: 20px; }
+    </style>
 </head>
 <body>
 
-    <!-- STICKY TOP SMART NAVIGATION BAR WITH DROPDOWN LISTS -->
+    <!-- STICKY TOP SMART NAVIGATION BAR WITH LANGUAGE TOGGLE -->
     <div class="sticky-title-bar">
         <div class="bar-alert">
-            <i class="fas fa-bolt"></i> NK डिजिटल हब ग्रुप:
+            <i class="fas fa-bolt"></i> 
+            <span class="lang-text" data-hi="NK मल्टी-डिजिटल हब समूह:" data-en="NK Multi-Digital Hub Group:">NK मल्टी-डिजिटल हब समूह:</span>
         </div>
-        
         <div class="portal-nav">
-            <!-- LIST 1: GOVERNMENT PORTALS -->
-            <div class="nav-dropdown">
-                <div class="dropdown-trigger"><i class="fas fa-university"></i> सरकारी पोर्टल <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
-                <div class="dropdown-content">
-                    <a href="https://sso.rajasthan.gov.in/" target="_blank"><i class="fas fa-fingerprint"></i> SSO लॉगिन</a>
-                    <a href="https://jansoochna.rajasthan.gov.in/" target="_blank"><i class="fas fa-info-circle"></i> जन सूचना पोर्टल</a>
-                    <a href="https://pmkisan.gov.in/" target="_blank"><i class="fas fa-seedling"></i> पीएम किसान पोर्टल</a>
-                    <a href="https://food.rajasthan.gov.in/" target="_blank"><i class="fas fa-utensils"></i> राशन कार्ड पोर्टल</a>
-                </div>
-            </div>
-
-            <!-- LIST 2: EDUCATION & JOBS -->
-            <div class="nav-dropdown">
-                <div class="dropdown-trigger"><i class="fas fa-user-graduate"></i> एजुकेशन & जॉब्स <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
-                <div class="dropdown-content">
-                    <a href="https://ssc.gov.in/" target="_blank"><i class="fas fa-file-alt"></i> SSC पोर्टल</a>
-                    <a href="https://www.sarkaridisha.com/" target="_blank"><i class="fas fa-search"></i> सरकारी नौकरी / रिजल्ट</a>
-                    <a href="https://rajeduboard.rajasthan.gov.in/" target="_blank"><i class="fas fa-school"></i> RBSE बोर्ड पोर्टल</a>
-                </div>
-            </div>
-
-            <!-- LIST 3: BANKING & BC PORTALS -->
-            <div class="nav-dropdown">
-                <div class="dropdown-trigger"><i class="fas fa-wallet"></i> बैंकिंग सर्विसेज <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
-                <div class="dropdown-content">
-                    <a href="https://www.onlinesbi.sbi/" target="_blank"><i class="fas fa-piggy-bank"></i> SBI नेट बैंकिंग</a>
-                    <a href="https://www.brkgb.com/" target="_blank"><i class="fas fa-landmark"></i> BRKGB बैंक</a>
-                    <a href="https://mconnect.axisbank.co.in/" target="_blank"><i class="fas fa-user-tie"></i> Axis BC लॉगिन</a>
-                </div>
-            </div>
-
-            <!-- LIST 4: CORE QUICK LINKS -->
-            <div class="nav-dropdown">
-                <div class="dropdown-trigger"><i class="fas fa-link"></i> अन्य क्विक लिंक्स <i class="fas fa-chevron-down" style="font-size: 10px;"></i></div>
-                <div class="dropdown-content">
-                    <a href="https://uidai.gov.in/" target="_blank"><i class="fas fa-address-card"></i> UIDAI मुख्य पोर्टल</a>
-                    <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank"><i class="fas fa-id-card"></i> NSDL पैन कार्ड</a>
-                    <a href="https://digitalseva.csc.gov.in/" target="_blank"><i class="fas fa-laptop-house"></i> CSC डिजिटल सेवा</a>
-                </div>
-            </div>
-
-            <!-- DIRECT ACTION BUTTON -->
-            <div class="nav-dropdown">
-                <a href="#enquiry-section" class="dropdown-trigger order-now-btn"><i class="fas fa-envelope"></i> ऑर्डर बुक करें</a>
-            </div>
+            <a href="https://sso.rajasthan.gov.in/" target="_blank"><i class="fas fa-fingerprint"></i> <span class="lang-text" data-hi="SSO लॉगिन" data-en="SSO Login">SSO लॉगिन</span></a>
+            <a href="https://jansoochna.rajasthan.gov.in/" target="_blank"><i class="fas fa-info-circle"></i> <span class="lang-text" data-hi="जन सूचना पोर्टल" data-en="Jan Soochna Portal">जन सूचना पोर्टल</span></a>
+            <a href="https://ssc.gov.in/" target="_blank"><i class="fas fa-user-graduate"></i> <span class="lang-text" data-hi="SSC पोर्टल" data-en="SSC Portal">SSC Portal</span></a>
+            <a href="#enquiry-section"><i class="fas fa-envelope"></i> <span class="lang-text" data-hi="ऑर्डर बुक करें" data-en="Book Order">ऑर्डर बुक करें</span></a>
+            
+            <!-- LANGUAGE SWITCH TOGGLE -->
+            <button class="lang-switch-btn" onclick="toggleLanguage()">
+                <i class="fas fa-language"></i> <span id="langBtnText">English</span>
+            </button>
         </div>
     </div>
 
     <!-- MEGA PORTAL IDENTITY HEADER -->
     <header>
         <div class="header-logos">
-            <div class="logo-badge b-emitra">E-MITRA AUTHORIZED</div>
-            <div class="logo-badge b-csc">CSC DIGITAL SEVA</div>
-            <div class="logo-badge b-print">HI-TECH PRINTING PRESS</div>
-            <div class="logo-badge b-studio">CINEMATIC STUDIO</div>
-            <div class="logo-badge b-tech">COMPUTER CLINIC</div>
+            <div class="logo-badge b-emitra" class="lang-text" data-hi="E-MITRA AUTHORIZED" data-en="E-MITRA AUTHORIZED">E-MITRA AUTHORIZED</div>
+            <div class="logo-badge b-csc" class="lang-text" data-hi="CSC DIGITAL SEVA" data-en="CSC DIGITAL SEVA">CSC DIGITAL SEVA</div>
+            <div class="logo-badge b-print" class="lang-text" data-hi="HI-TECH PRINTING PRESS" data-en="HI-TECH PRINTING PRESS">HI-TECH PRINTING PRESS</div>
+            <div class="logo-badge b-studio" class="lang-text" data-hi="CINEMATIC STUDIO" data-en="CINEMATIC STUDIO">CINEMATIC STUDIO</div>
+            <div class="logo-badge b-tech" class="lang-text" data-hi="COMPUTER CLINIC" data-en="COMPUTER CLINIC">COMPUTER CLINIC</div>
         </div>
         <div class="brand-box">
             <h1>NK <span>DIGITAL HUB</span> & PRINTING PRESS</h1>
-            <div class="tagline">"ई-मित्र, आधुनिक प्रिंटिंग प्रेस, प्रोफेशनल STUDIO एवं कंप्यूटर सॉल्यूशन - सब एक ही छत के नीचे!"</div>
-            <div class="sub-tagline">खण्डार क्षेत्र का नंबर-1 टेक एवं SERVICE केंद्र। सरकारी फॉर्म्स से लेकर शादी के कार्ड, एचडी वीडियोग्राफी से लेकर लैपटॉप रिपेयरिंग तक का काम एकदम वाजिब और किफायती रेट पर किया जाता है।</div>
+            <div class="tagline class="lang-text" data-hi='"ई-मित्र, आधुनिक प्रिंटिंग प्रेस, प्रोफेशनल स्टूडियो एवं कंप्यूटर सॉल्यूशन - सब एक ही छत के नीचे!"' data-en='"E-Mitra, Modern Printing Press, Professional Studio & Computer Solution - All Under One Roof!"'>"ई-मित्र, आधुनिक प्रिंटिंग प्रेस, प्रोफेशनल स्टूडियो एवं कंप्यूटर सॉल्यूशन - सब एक ही छत के नीचे!"</div>
+            <div class="sub-tagline class="lang-text" data-hi="खण्डार क्षेत्र का नंबर-1 टेक एवं सर्विस सेंटर। सरकारी फॉर्म्स से लेकर शादी के कार्ड, एचडी वीडियोग्राफी से लेकर लैपटॉप रिपेयरिंग तक का काम एकदम वाजिब और किफायती रेट पर किया जाता है।" data-en="Khandar region's No.1 Tech & Service Center. Everything from government forms to wedding cards, HD videography to laptop repairing is done at very reasonable and affordable rates.">खण्डार क्षेत्र का नंबर-1 टेक एवं सर्विस सेंटर। सरकारी फॉर्म्स से लेकर शादी के कार्ड, एचडी वीडियोग्राफी से लेकर लैपटॉप रिपेयरिंग तक का काम एकदम वाजिब और किफायती रेट पर किया जाता है।</div>
         </div>
     </header>
 
     <div class="container">
 
-        <!-- NEW ATTRACTION: PRINTING PRESS, STUDIO & COMPUTER REPAIR RATE CARDS -->
-        <h2 class="section-title"><i class="fas fa-tags"></i> न्यू सर्विसेज: प्रिंटिंग, स्टूडियो एवं टेक केयर रेट लिस्ट (ऑर्डर के लिए क्लिक करें)</h2>
+        <!-- FIRST SECTION: RE-ESTABLISHED CORE E-MITRA & CSC FEE TABLES (MOVED TO TOP) -->
+        <h2 class="section-title">
+            <i class="fas fa-university"></i> 
+            <span class="lang-text" data-hi="ई-मित्र एवं सीएससी (CSC) सरकारी सेवा शुल्क" data-en="E-Mitra & CSC Government Service Fees">ई-मित्र एवं सीएससी (CSC) सरकारी सेवा शुल्क</span>
+        </h2>
+        <div class="grid-layout" style="margin-bottom: 40px;">
+            <div class="table-card">
+                <div class="table-header-custom" style="background: #e65c00;">
+                    <i class="fas fa-id-card"></i> 
+                    <span class="lang-text" data-hi="ई-मित्र राजस्थान सिटीजन सर्विसेज" data-en="E-Mitra Rajasthan Citizen Services">ई-मित्र राजस्थान सिटीजन सर्विसेज</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="lang-text" data-hi="सेवा का नाम" data-en="Service Name">सेवा का नाम</th>
+                            <th class="lang-text" data-hi="निर्धारित फीस" data-en="Prescribed Fee">निर्धारित फीस</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="lang-text" data-hi="जाति / मूल निवास / आय प्रमाण पत्र ऑनलाइन" data-en="Caste / Bonafide / Income Certificate Online">जाति / मूल निवास / आय प्रमाण पत्र ऑनलाइन</span></td><td><span class="fee-pill">₹50</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="जन आधार कार्ड संशोधन / नया नाम जोड़ना" data-en="Jan Aadhaar Card Correction / New Name Addition">जन आधार कार्ड संशोधन / नया नाम जोड़ना</span></td><td><span class="fee-pill">₹60</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="राशन कार्ड ऑनलाइन आवेदन व संशोधन" data-en="Ration Card Online Application & Correction">राशन कार्ड ऑनलाइन आवेदन व संशोधन</span></td><td><span class="fee-pill">₹50</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="वृद्धावस्था/विकलांग पेंशन वार्षिक भौतिक सत्यापन" data-en="Old Age/Handicapped Pension Annual Verification">वृद्धावस्था/विकलांग पेंशन वार्षिक भौतिक सत्यापन</span></td><td><span class="fee-pill">₹50</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-card">
+                <div class="table-header-custom" style="background: #005ce6;">
+                    <i class="fas fa-fingerprint"></i> 
+                    <span class="lang-text" data-hi="डिजिटल सेवा केंद्र (CSC) सर्विसेज" data-en="Digital Seva Kendra (CSC) Services">डिजिटल सेवा केंद्र (CSC) सर्विसेज</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="lang-text" data-hi="सेवा का नाम" data-en="Service Name">सेवा का नाम</th>
+                            <th class="lang-text" data-hi="निर्धारित फीस" data-en="Prescribed Fee">निर्धारित फीस</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="lang-text" data-hi="नया पैन कार्ड (NSDL फ़ास्ट ट्रैक)" data-en="New PAN Card (NSDL Fast Track)">नया पैन कार्ड (NSDL फ़ास्ट ट्रैक)</span></td><td><span class="fee-pill">₹150</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="आधार कार्ड बायोमेट्रिक/ओटीपी डाउनलोड + PVC प्रिंट" data-en="Aadhaar Card Biometric/OTP Download + PVC Print">आधार कार्ड बायोमेट्रिक/ओटीपी डाउनलोड + PVC प्रिंट</span></td><td><span class="fee-pill">₹30</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="पीएम किसान सम्मान निधि बायोमेट्रिक E-KYC" data-en="PM Kisan Samman Nidhi Biometric E-KYC">पीएम किसान सम्मान निधि बायोमेट्रिक E-KYC</span></td><td><span class="fee-pill">₹30</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="वाहन इंश्योरेंस (बाइक / कार / ट्रैक्टर बीमा)" data-en="Vehicle Insurance (Bike / Car / Tractor)">वाहन इंश्योरेंस (बाइक / कार / ट्रैक्टर बीमा)</span></td><td><span class="fee-pill" class="lang-text" data-hi="बेस्ट कोटेशन" data-en="Best Quotation">बेस्ट कोटेशन</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECOND SECTION: PRINTING PRESS, STUDIO & COMPUTER REPAIR RATE CARDS -->
+        <h2 class="section-title">
+            <i class="fas fa-tags"></i> 
+            <span class="lang-text" data-hi="न्यू सर्विसेज: प्रिंटिंग, स्टूडियो एवं टेक केयर रेट लिस्ट" data-en="New Services: Printing, Studio & Tech Care Rate List">न्यू सर्विसेज: प्रिंटिंग, स्टूडियो एवं टेक केयर रेट लिस्ट</span>
+        </h2>
         <div class="grid-layout">
             
             <!-- 1. PRINTING PRESS MODULE -->
             <div class="table-card">
                 <div class="table-header-custom" style="background: #db2777;">
-                    <i class="fas fa-print"></i> आधुनिक प्रिंटिंग press एवं डिज़ाइन सर्विसेज
+                    <i class="fas fa-print"></i> 
+                    <span class="lang-text" data-hi="आधुनिक प्रिंटिंग प्रेस एवं डिज़ाइन सर्विसेज" data-en="Modern Printing Press & Design Services">आधुनिक प्रिंटिंग प्रेस एवं डिज़ाइन सर्विसेज</span>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>आइटम / सर्विस का प्रकार</th>
-                            <th>अनुमानित रेट (स्टार्टिंग)</th>
+                            <th class="lang-text" data-hi="आइटम / सर्विस का प्रकार" data-en="Item / Service Type">आइटम / सर्विस का प्रकार</th>
+                            <th class="lang-text" data-hi="अनुमानित रेट (स्टार्टिंग)" data-en="Est. Rate (Starting)">अनुमानित रेट (स्टार्टिंग)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="clickable-row" onclick="autoSelectService('printing', 'शादी कार्ड (Shadi Cards - फैंसी & बॉक्स डिज़ाइन)', this)"><td>शादी कार्ड (Shadi Cards - फैंसी & बॉक्स डिज़ाइन)</td><td><span class="fee-pill pill-orange">₹10 से ₹150 / पीस</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('printing', 'डिजिटल विजिटिंग कार्ड (Premium Visiting Cards)', this)"><td>डिजिटल विजिटिंग कार्ड (Premium Visiting Cards 100 Pcs)</td><td><span class="fee-pill pill-orange">₹200 से शुरू</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('printing', 'दुकान / कोचिंग पैम्फलेट (Pamphlets)', this)"><td>दुकान / कोचिंग पैम्फलेट (Pamphlets Printing - 1000 Pcs)</td><td><span class="fee-pill pill-orange">₹999 पैक</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('printing', 'फ्लेक्स बैनर (Flex Banner)', this)"><td>फ्लेक्स बैनर (Flex Banner Printing HD Quality)</td><td><span class="fee-pill pill-orange">₹25 / स्क्वायर फीट</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('printing', 'कस्टम बिल बुक / रसीद बुक', this)"><td>कस्टम बिल बुक / रसीद बुक (Duplicate Bill Book)</td><td><span class="fee-pill pill-orange">₹120 / बुक</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('printing', 'आमंत्रण कार्ड (Birthday / कुआं पूजन)', this)"><td>आमंत्रण कार्ड (Birthday / कुआं पूजन / पार्टी कार्ड)</td><td><span class="fee-pill pill-orange">₹5 से ₹20 / पीस</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="शादी कार्ड (Fancy & Box Designs)" data-en="Wedding Cards (Fancy & Box Designs)">शादी कार्ड (Fancy & Box Designs)</span></td><td><span class="fee-pill pill-orange">₹10 - ₹150 / Pc</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="डिजिटल विजिटिंग कार्ड (Premium 100 Pcs)" data-en="Digital Visiting Cards (Premium 100 Pcs)">डिजिटल विजिटिंग कार्ड (Premium 100 Pcs)</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="₹200 से शुरू" data-en="Starts ₹200">₹200 से शुरू</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="दुकान / कोचिंग पैम्फलेट (1000 Pcs)" data-en="Shop / Coaching Pamphlets (1000 Pcs)">दुकान / कोचिंग पैम्फलेट (1000 Pcs)</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="₹999 पैक" data-en="₹999 Pack">₹999 पैक</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="फ्लेक्स बैनर (Flex Banner Printing HD)" data-en="Flex Banner Printing HD Quality">फ्लेक्स बैनर (Flex Banner Printing HD)</span></td><td><span class="fee-pill pill-orange">₹25 / Sq.Ft</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="कस्टम बिल बुक / रसीद बुक" data-en="Custom Bill Book / Receipt Book">कस्टम बिल बुक / रसीद बुक</span></td><td><span class="fee-pill pill-orange">₹120 / Book</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="आमंत्रण कार्ड (Birthday / कुआं पूजन)" data-en="Invitation Cards (Birthday / Party)">आमंत्रण कार्ड (Birthday / कुआं पूजन)</span></td><td><span class="fee-pill pill-orange">₹5 - ₹20 / Pc</span></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -696,22 +646,23 @@
             <!-- 2. STUDIO - PHOTOGRAPHY & VIDEOGRAPHY -->
             <div class="table-card">
                 <div class="table-header-custom" style="background: #7c3aed;">
-                    <i class="fas fa-camera-retro"></i> स्टूडियो, एचडी वीडियोग्राफी एवं रील/YT मेकिंग
+                    <i class="fas fa-camera-retro"></i> 
+                    <span class="lang-text" data-hi="स्टूडियो, एचडी वीडियोग्राफी एवं रील/YT मेकिंग" data-en="Studio, HD Videography & Reels/YT Making">स्टूडियो, एचडी वीडियोग्राफी एवं रील/YT मेकिंग</span>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>इवेंट / वीडियो क्रिएशन प्रकार</th>
-                            <th>अनुमानित पैक रेट</th>
+                            <th class="lang-text" data-hi="इवेंट / वीडियो क्रिएशन प्रकार" data-en="Event / Video Creation Type">इवेंट / वीडियो क्रिएशन प्रकार</th>
+                            <th class="lang-text" data-hi="अनुमानित पैक रेट" data-en="Estimated Pack Rate">अनुमानित पैक रेट</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="clickable-row" onclick="autoSelectService('studio', 'शादी/पार्टी फुल वीडियोग्राफी (HD/4K)', this)"><td>शादी/पार्टी फुल वीडियोग्राफी (HD/4K Video Shooting)</td><td><span class="fee-pill">₹8,000 / दिन से</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('studio', 'कैंडिड फोटोग्राफी एवं एल्बम डिजाइनिंग', this)"><td>कैंडिड फोटोग्राफी एवं एल्बम डिजाइनिंग (Candid/Traditional)</td><td><span class="fee-pill">₹7,500 / इवेंट से</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('studio', 'बर्थडे पार्टी एवं छोटा प्रोग्राम शूट', this)"><td>बर्थडे पार्टी एवं छोटा प्रोग्राम (Complete Shoot Pack)</td><td><span class="fee-pill">₹3,500 से शुरू</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('video_edit', 'YouTube वीडियो एडिटिंग', this)"><td>YouTube वीडियो एडिटिंग (Professional Cuts & Audio Setup)</td><td><span class="fee-pill">₹399 / वीडियो</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('video_edit', 'Instagram Reels / YT Shorts Editing', this)"><td>Instagram Reels / YT Shorts (Cinematic Color & Transition)</td><td><span class="fee-pill">₹199 / रील</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('studio', 'पासपोर्ट साइज फोटो (8 Pcs)', this)"><td>पासपोर्ट साइज फोटो (Instant Passport Photos - 8 Pcs)</td><td><span class="fee-pill">₹40 तुरंत</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="शादी/पार्टी फुल वीडियोग्राफी (HD/4K Shooting)" data-en="Wedding Full Videography (HD/4K Shooting)">शादी/पार्टी फुल वीडियोग्राफी (HD/4K Shooting)</span></td><td><span class="fee-pill" class="lang-text" data-hi="₹8,000 / दिन से" data-en="Starts ₹8,000/Day">₹8,000 / दिन से</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="कैंडिड फोटोग्राफी एवं एल्बम डिजाइनिंग" data-en="Candid Photography & Album Design">कैंडिड फोटोग्राफी एवं एल्बम डिजाइनिंग</span></td><td><span class="fee-pill" class="lang-text" data-hi="₹7,500 / इवेंट से" data-en="Starts ₹7,500/Event">₹7,500 / इवेंट से</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="बर्थडे पार्टी एवं छोटा प्रोग्राम" data-en="Birthday Party & Small Functions">बर्थडे पार्टी एवं छोटा प्रोग्राम</span></td><td><span class="fee-pill" class="lang-text" data-hi="₹3,500 से शुरू" data-en="Starts ₹3,500">₹3,500 से शुरू</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="YouTube वीडियो एडिटिंग (Professional)" data-en="YouTube Video Editing (Professional)">YouTube वीडियो एडिटिंग (Professional)</span></td><td><span class="fee-pill">₹399 / Video</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="Instagram Reels / YT Shorts" data-en="Instagram Reels / YT Shorts">Instagram Reels / YT Shorts</span></td><td><span class="fee-pill">₹199 / Reel</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="पासपोर्ट साइज फोटो (Instant - 8 Pcs)" data-en="Passport Size Photos (Instant - 8 Pcs)">पासपोर्ट साइज फोटो (Instant - 8 Pcs)</span></td><td><span class="fee-pill" class="lang-text" data-hi="₹40 तुरंत" data-en="₹40 Instant">₹40 तुरंत</span></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -719,156 +670,134 @@
             <!-- 3. COMPUTER & LAPTOP HARDWARE / SOFTWARE CLINIC -->
             <div class="table-card">
                 <div class="table-header-custom" style="background: #059669;">
-                    <i class="fas fa-laptop-medical"></i> कंप्यूटर / लैपटॉप हार्डवेयर एवं सॉफ्टवेयर क्लीनिक
+                    <i class="fas fa-laptop-medical"></i> 
+                    <span class="lang-text" data-hi="कंप्यूटर / लैपटॉप हार्डवेयर एवं सॉफ्टवेयर क्लीनिक" data-en="Computer & Laptop Hardware/Software Clinic">कंप्यूटर / लैपटॉप हार्डवेयर एवं सॉफ्टवेयर क्लीनिक</span>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>हार्डवेयर खराबी / सॉफ्टवेयर समस्या</th>
-                            <th>सर्विस charge + पार्ट्स अलग से</th>
+                            <th class="lang-text" data-hi="हार्डवेयर खराबी / सॉफ्टवेयर समस्या" data-en="Hardware Fault / Software Issue">हार्डवेयर खराबी / सॉफ्टवेयर समस्या</th>
+                            <th class="lang-text" data-hi="सर्विस चार्ज + पार्ट्स अलग से" data-en="Service Charge + Parts Extra">सर्विस चार्ज + पार्ट्स अलग से</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="clickable-row" onclick="autoSelectService('computer', 'विंडोज इंस्टॉलेशन (Windows 10/11)', this)"><td>विंडोज इंस्टॉलेशन (Original Windows 10/11 + All Drivers)</td><td><span class="fee-pill pill-orange">₹399 - ₹499</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('computer', 'सिस्टम फ़ास्ट अपग्रेड (SSD Installation)', this)"><td>सिस्टम फ़ास्ट अपग्रेड (पुराने PC में High Speed SSD लगाना)</td><td><span class="fee-pill pill-orange">₹450 सर्विस</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('computer', 'कंप्यूटर / गेमिंग लैपटॉप डीप क्लीनिंग', this)"><td>कंप्यूटर / गेमिंग लैपटॉप डीप क्लीनिंग (Thermal Paste Service)</td><td><span class="fee-pill pill-orange">₹499 फिक्स</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('computer', 'एंटीवायरस इंस्टॉलेशन & वायरस क्लीनिंग', this)"><td>एंटीवायरस इंस्टॉलेशन एवं खतरनाक वायरस क्लीनिंग</td><td><span class="fee-pill pill-orange">₹350 से शुरू</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('computer', 'हार्डवेयर एकता पार्ट्स चेंज', this)"><td>हार्डवेयर पार्ट्स चेंज (Keyboard/Screen/Hinge/Battery Setup)</td><td><span class="fee-pill pill-orange">मॉडल अनुसार बेस्ट</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('computer', 'डिलीट डाटा रिकवरी (Data Recovery)', this)"><td>डिलीट डाटा रिकवरी (Lost Data/HDD Data Recovery)</td><td><span class="fee-pill pill-orange">₹999 से शुरू</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="विंडोज इंस्टॉलेशन (Original Win 10/11 + Drivers)" data-en="Windows Installation (Original Win 10/11)">विंडोज इंस्टॉलेशन (Original Win 10/11 + Drivers)</span></td><td><span class="fee-pill pill-orange">₹399 - ₹499</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="सिस्टम फ़ास्ट अपग्रेड (High Speed SSD Setup)" data-en="System Fast Upgrade (High Speed SSD Setup)">सिस्टम फ़ास्ट अपग्रेड (High Speed SSD Setup)</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="₹450 सर्विस" data-en="₹450 Service">₹450 सर्विस</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="कंप्यूटर / गेमिंग लैपटॉप डीप क्लीनिंग" data-en="Computer / Gaming Laptop Deep Cleaning">कंप्यूटर / गेमिंग लैपटॉप डीप क्लीनिंग</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="₹499 फिक्स" data-en="₹499 Fix">₹499 फिक्स</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="एंटीवायरस इंस्टॉलेशन एवं वायरस क्लीनिंग" data-en="Antivirus Installation & Virus Removal">एंटीवायरस इंस्टॉलेशन एवं वायरस क्लीनिंग</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="₹350 से शुरू" data-en="Starts ₹350">₹350 से शुरू</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="हार्डवेयर पार्ट्स चेंज (Keyboard/Screen/Battery)" data-en="Hardware Parts Replacement">हार्डवेयर पार्ट्स चेंज (Keyboard/Screen/Battery)</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="बेस्ट रेट" data-en="Best Market Rates">बेस्ट रेट</span></td></tr>
+                        <tr><td><span class="lang-text" data-hi="डिलीट डाटा रिकवरी (Lost Data/HDD)" data-en="Deleted Data Recovery (Lost Data/HDD)">डिलीट डाटा रिकवरी (Lost Data/HDD)</span></td><td><span class="fee-pill pill-orange" class="lang-text" data-hi="₹999 से शुरू" data-en="Starts ₹999">₹999 से शुरू</span></td></tr>
                     </tbody>
                 </table>
             </div>
 
         </div>
 
-        <!-- RE-ESTABLISHED CORE E-MITRA & CSC FEE TABLES -->
-        <h2 class="section-title"><i class="fas fa-university"></i> ई-मित्र एवं सीएससी (CSC) सरकारी सेवा शुल्क (ऑर्डर के लिए क्लिक करें)</h2>
-        <div class="grid-layout">
-            <div class="table-card">
-                <div class="table-header-custom" style="background: #e65c00;">
-                    <i class="fas fa-id-card"></i> ई-मित्र राजस्थान सिटीजन सर्विसेज
-                </div>
-                <table>
-                    <thead>
-                        <tr><th>सेवा का नाम</th><th>निर्धारित फीस</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr class="clickable-row" onclick="autoSelectService('emitra', 'जाति / मूल निवास / आय प्रमाण पत्र ऑनलाइन', this)"><td>जाति / मूल निवास / आय प्रमाण पत्र ऑनलाइन</td><td><span class="fee-pill">₹50</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('emitra', 'जन आधार कार्ड संशोधन / नया नाम जोड़ना', this)"><td>जन आधार कार्ड संशोधन / नया नाम जोड़ना</td><td><span class="fee-pill">₹60</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('emitra', 'राशन कार्ड ऑनलाइन आवेदन व संशोधन', this)"><td>राशन कार्ड ऑनलाइन आवेदन व संशोधन</td><td><span class="fee-pill">₹50</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('emitra', 'वृद्धावस्था/विकलांग पेंशन वार्षिक भौतिक सत्यापन', this)"><td>वृद्धावस्था/विकलांग पेंशन वार्षिक भौतिक सत्यापन</td><td><span class="fee-pill">₹50</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="table-card">
-                <div class="table-header-custom" style="background: #005ce6;">
-                    <i class="fas fa-fingerprint"></i> डिजिटल सेवा केंद्र (CSC) सर्विसेज
-                </div>
-                <table>
-                    <thead>
-                        <tr><th>सेवा का नाम</th><th>निर्धारित फीस</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr class="clickable-row" onclick="autoSelectService('csc', 'नया पैन कार्ड आवेदन (NSDL)', this)"><td>नया पैन कार्ड (NSDL / फ़ास्ट ट्रैक)</td><td><span class="fee-pill">₹150</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('csc', 'आधार कार्ड बायोमेट्रिक/ओटीपी डाउनलोड + PVC प्रिंट', this)"><td>आधार कार्ड बायोमेट्रिक/ओटीपी डाउनलोड + PVC प्रिंट</td><td><span class="fee-pill">₹30</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('csc', 'पीएम किसान सम्मान निधि बायोमेट्रिक E-KYC', this)"><td>पीएम किसान सम्मान निधि बायोमेट्रिक E-KYC</td><td><span class="fee-pill">₹30</span></td></tr>
-                        <tr class="clickable-row" onclick="autoSelectService('csc', 'वाहन इंश्योरेंस (बाइक / कार / ट्रैक्टर बीमा)', this)"><td>वाहन इंश्योरेंस (बाइक / कार / ट्रैक्टर बीमा)</td><td><span class="fee-pill">बेस्ट कोटेशन</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <!-- PDF OFFLINE APPLICATION DOWNLOADS SECTION WITH EMITRA KAKA LIVE DIRECT CHANNELS -->
-        <h2 class="section-title"><i class="fas fa-download"></i> आवश्यक ऑफलाइन फॉर्म्स एवं पीडीएफ (PDF Section)</h2>
+        <!-- PDF OFFLINE APPLICATION DOWNLOADS SECTION -->
+        <h2 class="section-title">
+            <i class="fas fa-download"></i> 
+            <span class="lang-text" data-hi="आवश्यक ऑफलाइन फॉर्म्स एवं पीडीएफ (PDF Section)" data-en="Required Offline Forms & PDF Section">आवश्यक ऑफलाइन फॉर्म्स एवं पीडीएफ (PDF Section)</span>
+        </h2>
         <div class="forms-container">
+            <div class="panel-form-card" style="grid-column:1/-1">
+                <h3>🔍 <span class="lang-text" data-hi="197 ऑफलाइन फॉर्म्स सर्च पोर्टल" data-en="197 Offline Forms Search Portal">197 ऑफलाइन फॉर्म्स सर्च पोर्टल</span></h3>
+                <input id="formSearchPortal" class="form-search-box" placeholder="फॉर्म का नाम खोजें (जैसे: जाति, मूल निवास, आय)..." onkeyup="searchFormsPortal()">
+                <div id="formsPortalList" class="forms-portal"></div>
+            </div>
+
             <div class="panel-form-card">
-                <h3><i class="fas fa-file-alt" style="color:#e65c00;"></i> राजस्थान सरकार फॉर्म</h3>
+                <h3><i class="fas fa-file-alt" style="color:#e65c00;"></i> <span class="lang-text" data-hi="राजस्थान सरकार फॉर्म" data-en="Rajasthan Government Forms">राजस्थान सरकार फॉर्म</span></h3>
                 <ul class="links-stack">
-                    <li><a href="https://emitrakaka.com/wp-content/uploads/2023/11/Caste-Certificate-Form-Rajasthan-PDF-Download.pdf" target="_blank">जाति प्रमाण पत्र ऑफलाइन फॉर्म <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
-                    <li><a href="https://emitrakaka.com/wp-content/uploads/2023/10/Mool-Niwas-Form-Rajasthan-PDF-Download.pdf" target="_blank">मूल निवास प्रमाण पत्र प्रारूप <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
-                    <li><a href="https://emitrakaka.com/wp-content/uploads/2023/10/Income-Certificate-Form-Rajasthan-4-Page-PDF-Download.pdf" target="_blank">आय प्रमाण पत्र (4 पेज नवीनतम प्रारूप) <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="राजस्थान सरकार - जाति प्रमाण पत्र ऑफलाइन फॉर्म" data-en="Rajasthan Govt - Caste Certificate Offline Form">राजस्थान सरकार - जाति प्रमाण पत्र ऑफलाइन फॉर्म</span> <i class="fas fa-file-download dl-icon"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="राजस्थान सरकार - मूल निवास प्रमाण पत्र प्रारूप" data-en="Rajasthan Govt - Domicile Certificate Format">राजस्थान सरकार - मूल निवास प्रमाण पत्र प्रारूप</span> <i class="fas fa-file-download dl-icon"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="राजस्थान सरकार - आय प्रमाण पत्र (4 पेज नवीनतम प्रारूप)" data-en="Rajasthan Govt - Income Certificate (4-Page Latest Format)">राजस्थान सरकार - आय प्रमाण पत्र (4 पेज नवीनतम प्रारूप)</span> <i class="fas fa-file-download dl-icon"></i></a></li>
                 </ul>
             </div>
 
             <div class="panel-form-card">
-                <h3><i class="fas fa-university" style="color:#005ce6;"></i> सभी बैंकों के फॉर्म</h3>
+                <h3><i class="fas fa-university" style="color:#005ce6;"></i> <span class="lang-text" data-hi="सभी बैंकों के फॉर्म" data-en="All Bank Forms">सभी बैंकों के फॉर्म</span></h3>
                 <ul class="links-stack">
-                    <li><a href="https://www.sbi.co.in/documents/16012/1400711/021122-NEW+ACCOUNT+OPENING+FORM+INDIVIDUALS.pdf" target="_blank">नया खाता खोलने का फॉर्म (SBI) <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
-                    <li><a href="https://www.sbi.co.in/documents/16012/1400711/021122-KYC+FORM.pdf" target="_blank">बैंक खाते का KYC अपडेट फॉर्म <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
-                    <li><a href="https://www.npci.org.in/PDF/npci/aadhaar-seeded/Application-form-for-Aadhaar-Seeding.pdf" target="_blank">आधार लिंक डीबीटी (NPCI Mapping) फॉर्म <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="नया खाता खोलने का फॉर्म (SBI/BRKGB)" data-en="New Account Opening Form (SBI/BRKGB)">नया खाता खोलने का फॉर्म (SBI/BRKGB)</span> <i class="fas fa-file-download dl-icon"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="बैंक खाते का KYC अपडेट फॉर्म" data-en="Bank Account KYC Update Form">बैंक खाते का KYC अपडेट फॉर्म</span> <i class="fas fa-file-download dl-icon"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="आधार लिंक डीबीटी (NPCI Mapping) फॉर्म" data-en="Aadhaar Link DBT (NPCI Mapping) Form">आधार लिंक डीबीटी (NPCI Mapping) फॉर्म</span> <i class="fas fa-file-download dl-icon"></i></a></li>
                 </ul>
             </div>
 
             <div class="panel-form-card">
-                <h3><i class="fas fa-folder-plus" style="color:#10b981;"></i> प्रिंटिंग एवं अन्य फॉर्म्स</h3>
+                <h3><i class="fas fa-folder-plus" style="color:#10b981;"></i> <span class="lang-text" data-hi="प्रिंटिंग एवं अन्य फॉर्म्स" data-en="Printing & Other Forms">प्रिंटिंग एवं अन्य फॉर्म्स</span></h3>
                 <ul class="links-stack">
-                    <li><a href="https://emitrakaka.com/wp-content/uploads/2023/11/Marriage-Registration-Form-Rajasthan-PDF-Download.pdf" target="_blank">विवाह पंजीकरण / शादी फॉर्म प्रारूप <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
-                    <li><a href="https://emitrakaka.com/wp-content/uploads/2024/02/Bio-Data-Format-In-Hindi-PDF-Download.pdf" target="_blank">बायोडाटा (Biodata Form Format) <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
-                    <li><a href="https://pmkisan.gov.in/Documents/KCC_Form.pdf" target="_blank">पीएम किसान / KCC ऑफलाइन घोषणा पत्र <i class="fas fa-file-pdf dl-icon" style="color: #dc2626;"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="शब्दावली/शादी कार्ड मैटर प्रारूप हिंदी" data-en="Wedding Card Matter Format Hindi">शब्दावली/शादी कार्ड मैटर प्रारूप हिंदी</span> <i class="fas fa-file-download dl-icon"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="बायोडाटा फॉर्म प्रारूप (Biodata Format)" data-en="Biodata Form Format (Marriage/Job)">बायोडाटा फॉर्म प्रारूप (Biodata Format)</span> <i class="fas fa-file-download dl-icon"></i></a></li>
+                    <li><a href="#" download><span class="lang-text" data-hi="पीएम किसान ऑफलाइन घोषणा पत्र" data-en="PM Kisan Offline Declaration Form">पीएम किसान ऑफलाइन घोषणा पत्र</span> <i class="fas fa-file-download dl-icon"></i></a></li>
                 </ul>
             </div>
         </div>
 
 
-        <!-- ONLINE INTERACTIVE BOOKING ENGINE WITH PAYMENT LOGIC -->
-        <h2 class="section-title" id="enquiry-section"><i class="fas fa-paper-plane"></i> घर बैठे ऑनलाइन ऑर्डर एवं इंक्वायरी सिस्टम</h2>
+        <!-- ONLINE INTERACTIVE BOOKING ENGINE -->
+        <h2 class="section-title" id="enquiry-section">
+            <i class="fas fa-paper-plane"></i> 
+            <span class="lang-text" data-hi="घर बैठे ऑनलाइन ऑर्डर एवं इंक्वायरी सिस्टम" data-en="Online Order & Enquiry System From Home">घर बैठे ऑनलाइन ऑर्डर एवं इंक्वायरी सिस्टम</span>
+        </h2>
         <div class="portal-form-section">
             
             <div class="info-panel">
                 <div>
-                    <h3>दुकान पर आए बिना ऑर्डर बुक करें!</h3>
-                    <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">आप शादी कार्ड का मैटर, रिपेयरिंग के लिए लैपटॉप की समस्या या किसी भी सरकारी फॉर्म के दस्तावेज़ यहाँ सीधे अपलोड करके भेज सकते हैं। हम आपसे तुरंत संपर्क करेंगे।</p>
+                    <h3 class="lang-text" data-hi="दुकान पर आए बिना ऑर्डर बुक करें!" data-en="Book Order Without Visiting Shop!">दुकान पर आए बिना ऑर्डर बुक करें!</h3>
+                    <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin-bottom: 25px;" class="lang-text" data-hi="आप शादी कार्ड का मैटर, रिपेयरिंग के लिए लैपटॉप की समस्या या किसी भी सरकारी फॉर्म के दस्तावेज़ यहाँ सीधे अपलोड करके भेज सकते हैं। हम आपसे तुरंत संपर्क करेंगे।" data-en="You can upload documents/matters for wedding cards, laptop repair or any government form directly here. We will contact you immediately.">आप शादी कार्ड का मैटर, रिपेयरिंग के लिए लैपटॉप की समस्या या किसी भी सरकारी फॉर्म के दस्तावेज़ यहाँ सीधे अपलोड करके भेज सकते हैं। हम आपसे तुरंत संपर्क करेंगे।</p>
                     
                     <div class="contact-details">
                         <div class="detail-row">
                             <div class="icon-box"><i class="fas fa-user-shield"></i></div>
-                            <div><strong>मुख्य संचालक:</strong><br>नफशाद खान (Nafshad Khan)</div>
+                            <div><strong class="lang-text" data-hi="मुख्य संचालक:" data-en="Proprietor:">मुख्य संचालक:</strong><br>नफशाद खान (Nafshad Khan)</div>
                         </div>
                         <div class="detail-row">
                             <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
-                            <div><strong>दुकान का पता (Full Address):</strong><br>शॉप नंबर 7 व 8, सब्जी मंडी के पास, जामा मस्जिद के नीचे, खण्डार, जिला सवाई माधोपुर, राजस्थान - 322025</div>
+                            <div><strong class="lang-text" data-hi="दुकान का पता (Full Address):" data-en="Shop Address:">दुकान का पता (Full Address):</strong><br><span class="lang-text" data-hi="शॉप नंबर 7 व 8, सब्जी मंडी के पास, जामा मस्जिद के नीचे, खण्डार, जिला सवाई माधोपुर, राजस्थान - 322025" data-en="Shop No. 7 & 8, Near Sabzi Mandi, Under Jama Masjid, Khandar, Dist. Sawai Madhopur, Rajasthan - 322025">शॉप नंबर 7 व 8, सब्जी मंडी के पास, जामा मस्जिद के नीचे, खण्डार, जिला सवाई माधोपुर, राजस्थान - 322025</span></div>
                         </div>
                         <div class="detail-row">
                             <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
-                            <div><strong>आधिकारिक ईमेल:</strong><br>nkemitraandcsc@gmail.com</div>
+                            <div><strong class="lang-text" data-hi="आधिकारिक ईमेल:" data-en="Official Email:">आधिकारिक ईमेल:</strong><br>nkemitraandcsc@gmail.com</div>
                         </div>
                     </div>
                 </div>
-                
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 16px; border-radius: 8px; font-size: 13px; color: #1e40af; line-height: 1.5;">
-                    <i class="fas fa-info-circle"></i> <strong>नोट:</strong> ऑर्डर सबमिट करने के बाद रसीद एवं काम की प्रगति (Progress) की जानकारी आपके व्हाट्सएप नंबर पर भेजी जाएगी। <strong>दस्तावेज़ अपलोड होने के बाद हमारी टीम आपसे आवश्यक जानकारी के लिए संपर्क करेगी।</strong>
+
+                <!-- ADDED PREMIUM DYNAMIC NOTICE FOR OTP REQUIREMENTS -->
+                <div class="otp-notice-box">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong class="lang-text" data-hi="महत्वपूर्ण सूचना (OTP वेरिफिकेशन):" data-en="Important Notice (OTP Verification):">महत्वपूर्ण सूचना (OTP वेरिफिकेशन):</strong><br>
+                        <span class="lang-text" data-hi="आपके दस्तावेज़ (Documents) ऑनलाइन प्राप्त होने के बाद, फॉर्म को फाइनल सबमिट करने के लिए हमारी टीम आपसे ओटीपी (OTP) के लिए संपर्क करेगी। कृपया अपना चालू मोबाइल नंबर ही दर्ज करें।" data-en="After receiving your documents online, our team will contact you for an OTP to final submit your application. Please provide an active mobile/WhatsApp number.">आपके दस्तावेज़ (Documents) ऑनलाइन प्राप्त होने के बाद, फॉर्म को फाइनल सबमिट करने के लिए हमारी टीम आपसे ओटीपी (OTP) के लिए संपर्क करेगी। कृपया अपना चालू मोबाइल नंबर ही दर्ज करें।</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Dynamic Interactive Form Section -->
             <div>
-                <form action="#" method="POST" onsubmit="handleFormSubmission(event)">
+                <form action="#" method="POST" onsubmit="handleFormSubmit(event)">
                     <div class="form-control-group">
-                        <label>ग्राहक / आवेदक का नाम:</label>
-                        <input type="text" placeholder="अपना नाम लिखें" required>
+                        <label class="lang-text" data-hi="ग्राहक / आवेदक का नाम:" data-en="Applicant / Customer Name:">ग्राहक / आवेदक का नाम:</label>
+                        <input type="text" class="lang-placeholder" data-hi="अपना नाम लिखें" data-en="Enter your full name" placeholder="अपना नाम लिखें" required>
                     </div>
                     <div class="form-control-group">
-                        <label>मोबाइल नंबर (WhatsApp नंबर):</label>
+                        <label class="lang-text" data-hi="मोबाइल नंबर (WhatsApp नंबर):" data-en="Mobile Number (WhatsApp No):">मोबाइल नंबर (WhatsApp नंबर):</label>
                         <input type="text" placeholder="91xxxxxxxx" required>
                     </div>
                     <div class="form-control-group">
-                        <label>सर्विस श्रेणी सेलेक्ट करें:</label>
-                        <select id="service-select" required>
-                            <option value="">-- कृपया सर्विस चुनें --</option>
-                            <option value="emitra">ई-मित्र / सरकारी फॉर्म आवेदन</option>
-                            <option value="csc">डिजिटल सेवा केंद्र (CSC) सर्विसेज</option>
-                            <option value="printing">शादी कार्ड / विजिटिंग कार्ड प्रिंटिंग</option>
-                            <option value="studio">वीडियो शूटिंग / फोटोग्राफी बुकिंग</option>
-                            <option value="video_edit">यूट्यूब वीडियो / instagram रील एडिटिंग</option>
-                            <option value="computer">कंप्यूटर-लैपटॉप रिपेयरिंग / विंडोज</option>
+                        <label class="lang-text" data-hi="सर्विस श्रेणी सेलेक्ट करें:" data-en="Select Service Category:">सर्विस श्रेणी सेलेक्ट करें:</label>
+                        <select required id="serviceSelector">
+                            <option value="" class="lang-text" data-hi="-- कृपया सर्विस चुनें --" data-en="-- Please Choose a Service --">-- कृपया सर्विस चुनें --</option>
+                            <option value="emitra" class="lang-text" data-hi="ई-मित्र / सरकारी फॉर्म आवेदन" data-en="E-Mitra / Govt Form Application">ई-मित्र / सरकारी फॉर्म आवेदन</option>
+                            <option value="printing" class="lang-text" data-hi="शादी कार्ड / विजिटिंग कार्ड प्रिंटिंग" data-en="Wedding Card / Visiting Card Printing">शादी कार्ड / विजिटिंग कार्ड प्रिंटिंग</option>
+                            <option value="studio" class="lang-text" data-hi="वीडियो शूटिंग / फोटोग्राफी बुकिंग" data-en="Video Shooting & Photography Booking">वीडियो शूटिंग / फोटोग्राफी बुकिंग</option>
+                            <option value="video_edit" class="lang-text" data-hi="यूट्यूब वीडियो / इंस्टाग्राम रील एडिटिंग" data-en="YouTube / Instagram Video Editing">यूट्यूब वीडियो / इंस्टाग्राम रील एडिटिंग</option>
+                            <option value="computer" class="lang-text" data-hi="कंप्यूटर-लैपटॉप रिपेयरिंग / विंडोज" data-en="Computer-Laptop Repair / Windows Setup">कंप्यूटर-लैपटॉप रिपेयरिंग / विंडोज</option>
                         </select>
                     </div>
 
                     <!-- Flexible Multifunctional Document Row System -->
                     <div class="form-control-group">
-                        <label>आवश्यक फाइल / दस्तावेज़ / मैटर अटैच करें:</label>
+                        <label class="lang-text" data-hi="आवश्यक फाइल / दस्तावेज़ / मैटर अटैच करें:" data-en="Attach Required Files / Documents / Matter:">आवश्यक फाइल / दस्तावेज़ / मैटर अटैच करें:</label>
                         <div class="dynamic-upload-box" id="upload-master-container">
                             <div class="upload-item-row">
                                 <input type="file" required>
@@ -876,31 +805,16 @@
                             </div>
                         </div>
                         <button type="button" class="action-button add-more-btn" style="margin-top: 10px;" onclick="createNewUploadField()">
-                            <i class="fas fa-plus"></i> + एक और फाइल जोड़ें
+                            <i class="fas fa-plus"></i> <span class="lang-text" data-hi="+ एक और फाइल जोड़ें" data-en="+ Add One More File">+ एक और फाइल जोड़ें</span>
                         </button>
                     </div>
 
                     <div class="form-control-group">
-                        <label>कार्य विवरण / आवश्यक निर्देश (विवरण विस्तार से लिखें):</label>
-                        <textarea id="service-details" rows="3" placeholder="जैसे: शादी कार्ड में कितने पीस चाहिए, या कंप्यूटर में क्या खराबी आ रही है..."></textarea>
+                        <label class="lang-text" data-hi="कार्य विवरण / आवश्यक निर्देश (विवरण विस्तार से लिखें):" data-en="Work Details / Special Instructions (Write in Detail):">कार्य विवरण / आवश्यक निर्देश (विवरण विस्तार से लिखें):</label>
+                        <textarea rows="3" id="instructionTextArea" class="lang-placeholder" data-hi="जैसे: शादी कार्ड में कितने पीस चाहिए, या कंप्यूटर में क्या खराबी आ रही है..." data-en="E.g., How many wedding cards are needed, or what specific issue your computer has..." placeholder="जैसे: शादी कार्ड में कितने पीस चाहिए, या कंप्यूटर में क्या खराबी आ रही है..."></textarea>
                     </div>
 
-                    <!-- INTEGRATED PAYMENT OPTIONS -->
-                    <div class="form-control-group">
-                        <label><i class="fas fa-wallet"></i> भुगतान का प्रकार (Payment Method):</label>
-                        <div class="payment-radio-group">
-                            <label class="payment-label">
-                                <input type="radio" name="payment_method" value="Online UPI" checked>
-                                <span><i class="fab fa-google-pay"></i> ऑनलाइन UPI (PhonePe/GPay)</span>
-                            </label>
-                            <label class="payment-label">
-                                <input type="radio" name="payment_method" value="Cash at Shop">
-                                <span><i class="fas fa-money-bill-wave"></i> काउंटर पर नकद (Cash)</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">अपना ऑर्डर सबमिट करें</button>
+                    <button type="submit" class="submit-btn lang-text" data-hi="अपना ऑर्डर सबमिट करें" data-en="Submit Your Order Now">अपना ऑर्डर सबमिट करें</button>
                 </form>
             </div>
 
@@ -910,19 +824,136 @@
 
     <!-- CORPORATE DESIGN FOOTER -->
     <footer>
-        <p>&copy; 2026 NK Digital Hub & Printing Press - खण्डार (सवाई माधोपुर). सर्वाधिकार सुरक्षित।</p>
-        <p style="font-size: 13px; color: #64748b; margin-top: 6px;">ISO Certified Digital Services, Superfast Printing Engine & Tech Repairs.</p>
+        <p>&copy; 2026 NK Digital Hub & Printing Press - खण्डार (सवाई माधोपुर). <span class="lang-text" data-hi="सर्वाधिकार सुरक्षित।" data-en="All Rights Reserved.">सर्वाधिकार सुरक्षित।</span></p>
+        <p style="font-size: 13px; color: #64748b; margin-top: 6px;" class="lang-text" data-hi="ISO Certified Digital Services, सुपरफास्ट प्रिंटिंग इंजन एवं हाई-टेक रिपेयर्स।" data-en="ISO Certified Digital Services, Superfast Printing Engine & High-Tech Repairs.">ISO Certified Digital Services, सुपरफास्ट प्रिंटिंग इंजन एवं हाई-टेक रिपेयर्स।</p>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT FOR ATTACHMENT, LINKING & ANIMATION -->
+    <!-- INTERACTIVE JAVASCRIPT FOR LANGUAGES, SEARCH & ATTACHMENTS -->
     <script>
-        let counterSeed = 1;
+        // COMPREHENSIVE FLUID RAJASTHAN GOVT FORMS ARRAY ALIGNED WITH USER DESIGN DEMANDS
+        const rajasthanFormsHindi = [
+            "राजस्थान सरकार - जाति प्रमाण पत्र ऑफलाइन फॉर्म",
+            "राजस्थान सरकार - मूल निवास प्रमाण पत्र प्रारूप",
+            "राजस्थान सरकार - आय प्रमाण पत्र (4 पेज नवीनतम प्रारूप)",
+            "राजस्थान सरकार - जन आधार कार्ड नया नामांकन फॉर्म",
+            "राजस्थान सरकार - जन आधार कार्ड नाम जुड़वाने / संशोधन फॉर्म",
+            "राजस्थान सरकार - जन्म प्रमाण पत्र (Birth Certificate) आवेदन फॉर्म",
+            "राजस्थान सरकार - मृत्यु प्रमाण पत्र (Death Certificate) आवेदन पत्र",
+            "राजस्थान सरकार - विवाह पंजीकरण (Marriage Registration) फॉर्म प्रारूप",
+            "राजस्थान सरकार - वृद्धावस्था पेंशन योजना आवेदन फॉर्म",
+            "राजस्थान सरकार - कल्याणी / विधवा पेंशन योजना फॉर्म",
+            "राजस्थान सरकार - विशेष योग्यजन (विकलांग) पेंशन योजना फॉर्म",
+            "राजस्थान सरकार - पालनहार योजना (Palanhar Yojana) आवेदन फॉर्म",
+            "राजस्थान सरकार - उत्तर मैट्रिक छात्रवृत्ति (Scholarship) ऑफलाइन फॉर्म",
+            "राजस्थान सरकार - शुभ शक्ति योजना श्रमिक डायरी फॉर्म",
+            "राजस्थान सरकार - खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाने का फॉर्म",
+            "राजस्थान सरकार - नया राशन कार्ड आवेदन व संशोधन प्रारूप",
+            "राजस्थान सरकार - पुलिस वेरिफिकेशन (चरित्र प्रमाण पत्र) ऑफलाइन फॉर्म",
+            "राजस्थान सरकार - ईडब्ल्यूएस (EWS Certificate) आवेदन प्रारूप नवीनतम",
+            "राजस्थान सरकार - अल्पसंख्यक (Minority Certificate) प्रमाण पत्र फॉर्म",
+            "राजस्थान सरकार - हैसियत प्रमाण पत्र आवेदन फॉर्म",
+            "राजस्थान सरकार - श्रम विभाग निर्माण श्रमिक औजार टूलकिट सहायता फॉर्म",
+            "राजस्थान सरकार - व्यापार रजिस्ट्रेशन / गुमास्ता लाइसेंस फॉर्म"
+        ];
 
-        // Function to create dynamic upload fields
+        const rajasthanFormsEnglish = [
+            "Rajasthan Govt - Caste Certificate Offline Form",
+            "Rajasthan Govt - Bonafide / Domicile Certificate Format",
+            "Rajasthan Govt - Income Certificate (4-Page Latest Format)",
+            "Rajasthan Govt - Jan Aadhaar Card New Enrollment Form",
+            "Rajasthan Govt - Jan Aadhaar Card Name Addition/Correction Form",
+            "Rajasthan Govt - Birth Certificate Application Form",
+            "Rajasthan Govt - Death Certificate Application Form",
+            "Rajasthan Govt - Marriage Registration Form Format",
+            "Rajasthan Govt - Old Age Pension Scheme Form",
+            "Rajasthan Govt - Widow Pension Scheme Application Form",
+            "Rajasthan Govt - Handicapped (Divyangjan) Pension Form",
+            "Rajasthan Govt - Palanhar Yojana Application Form",
+            "Rajasthan Govt - Post Metric Scholarship Offline Form",
+            "Rajasthan Govt - Shubh Shakti Yojana Shramik Diary Form",
+            "Rajasthan Govt - National Food Security Act (NFSA) Enrollment Form",
+            "Rajasthan Govt - New Ration Card & Correction Form",
+            "Rajasthan Govt - Police Verification (Character Certificate) Offline Form",
+            "Rajasthan Govt - EWS Certificate Latest Application Format",
+            "Rajasthan Govt - Minority Certificate Form",
+            "Rajasthan Govt - Property Valuation (Haisiyat) Form",
+            "Rajasthan Govt - Labour Department Tool-Kit Help Scheme Form",
+            "Rajasthan Govt - Business Registration Form"
+        ];
+
+        let currentLang = 'hi'; // Default view is Hindi as requested
+
+        // RENDER LIVE SEARCHABLE FORMS INSIDE RE-ARCHITECTED INTERACTIVE LIST
+        function renderForms(list) {
+            let box = document.getElementById('formsPortalList');
+            if (!box) return;
+            box.innerHTML = '';
+            list.forEach(f => {
+                let d = document.createElement('div');
+                d.className = 'form-item';
+                d.innerHTML = '📄 ' + f;
+                d.onclick = () => {
+                    let ta = document.getElementById('instructionTextArea');
+                    let selector = document.getElementById('serviceSelector');
+                    if (selector) selector.value = 'emitra';
+                    if (ta) {
+                        ta.value = (currentLang === 'hi' ? 'चयनित फॉर्म डाउनलोड एवं आवेदन हेतु: ' : 'Selected Form for Application: ') + f;
+                    }
+                    document.getElementById('enquiry-section').scrollIntoView({ behavior: 'smooth' });
+                };
+                box.appendChild(d);
+            });
+        }
+
+        function searchFormsPortal() {
+            let q = document.getElementById('formSearchPortal').value.toLowerCase();
+            let sourceArray = currentLang === 'hi' ? rajasthanFormsHindi : rajasthanFormsEnglish;
+            renderForms(sourceArray.filter(x => x.toLowerCase().includes(q)));
+        }
+
+        // FULL CONTROL STATE MANAGEMENT SYSTEM FOR FLUID WEB LANGUAGE SWAPPING
+        function toggleLanguage() {
+            currentLang = currentLang === 'hi' ? 'en' : 'hi';
+            document.documentElement.setAttribute('lang', currentLang);
+            
+            // Switch Text Content Dynamically via Schema Fields
+            document.querySelectorAll('.lang-text').forEach(el => {
+                let hiText = el.getAttribute('data-hi');
+                let enText = el.getAttribute('data-en');
+                if (currentLang === 'hi' && hiText) el.textContent = hiText;
+                if (currentLang === 'en' && enText) el.textContent = enText;
+            });
+
+            // Switch Element Placeholders
+            document.querySelectorAll('.lang-placeholder').forEach(el => {
+                let hiPlace = el.getAttribute('data-hi');
+                let enPlace = el.getAttribute('data-en');
+                if (currentLang === 'hi' && hiPlace) el.setAttribute('placeholder', hiPlace);
+                if (currentLang === 'en' && enPlace) el.setAttribute('placeholder', enPlace);
+            });
+
+            // Update Control Button Label
+            document.getElementById('langBtnText').textContent = currentLang === 'hi' ? 'English' : 'हिन्दी';
+            
+            // Refresh search panel context seamlessly
+            searchFormsPortal();
+        }
+
+        // HANDLE SUBMISSION ALERT INTEGRATING SMART OTP NOTIFICATION LOGIC
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            if (currentLang === 'hi') {
+                alert('बधाई हो! आपका डेटा NK डिजिटल हब तक पहुँच गया है।\n\nमहत्वपूर्ण: आपके दस्तावेज़ मिलने के बाद हमारी टीम अंतिम सबमिशन हेतु आपसे OTP के लिए संपर्क करेगी। कृपया कॉल का इंतज़ार करें।');
+            } else {
+                alert('Success! Your data has reached NK Digital Hub.\n\nImportant: After receiving your documents, our team will contact you for an OTP verification to final submit the application. Please keep your phone active.');
+            }
+        }
+
+        // ATTACHMENT NODE ADDITION ENGINE
+        let counterSeed = 1;
         function createNewUploadField() {
             counterSeed++;
             const targetContainer = document.getElementById('upload-master-container');
-            
             const newRow = document.createElement('div');
             newRow.className = 'upload-item-row';
             newRow.id = `dyn-row-${counterSeed}`;
@@ -933,47 +964,16 @@
                     <i class="fas fa-trash-alt"></i>
                 </button>
             `;
-            
             targetContainer.appendChild(newRow);
         }
 
         function removeGeneratedField(elementId) {
             const targetedElement = document.getElementById(elementId);
-            if (targetedElement) {
-                targetedElement.remove();
-            }
+            if (targetedElement) targetedElement.remove();
         }
 
-        // LINKING MODULE with CLICK ANIMATION
-        function autoSelectService(category, serviceName, rowElement) {
-            rowElement.classList.add('row-click-active');
-            setTimeout(() => {
-                rowElement.classList.remove('row-click-active');
-            }, 600);
-
-            const selectDropdown = document.getElementById('service-select');
-            if (selectDropdown) {
-                selectDropdown.value = category;
-            }
-
-            const detailsTextarea = document.getElementById('service-details');
-            if (detailsTextarea) {
-                detailsTextarea.value = `चुनी गई सेवा: ${serviceName}\n-----------------------------------\nकृपया अपना अन्य विवरण यहाँ लिखें: `;
-            }
-
-            const formSection = document.getElementById('enquiry-section');
-            if (formSection) {
-                formSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        function handleFormSubmission(event) {
-            event.preventDefault();
-            const chosenPayment = document.querySelector('input[name="payment_method"]:checked').value;
-            alert(`बधाई हो! आपका ऑर्डर सफलतापूर्वक NK डिजिटल हब तक पहुँच गया है।\n\nचुना गया भुगतान माध्यम: ${chosenPayment}\nहम जल्द ही आपसे संपर्क करेंगे।`);
-            event.target.reset();
-        }
+        // Bootstrap load sequence
+        window.addEventListener('load', () => renderForms(rajasthanFormsHindi));
     </script>
-
 </body>
 </html>
