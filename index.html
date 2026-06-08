@@ -402,6 +402,7 @@
             align-items: center;
             gap: 8px;
             color: #334155;
+            text-decoration: none;
         }
 
         .form-item:hover {
@@ -586,8 +587,8 @@
                         <span class="lang-en">Jan Aadhaar Card New Enrollment</span>
                         <span class="price-tag">₹50</span>
                     </div>
-                    <div class="rate-row" onclick="openServiceDetails('जन आधार कार्ड संशोधन / नाम जोड़ना', 'सरकारी योजना कल्याण')">
-                        <span class="lang-hi">जन आधार कार्ड संशोधन / नाम जोड़ना</span>
+                    <div class="rate-row" onclick="openServiceDetails('जन आधार कार्ड संशोधन / नाम जोड़ना', 'सरकारी योजना कल्याण')">
+                        <span class="lang-hi">जन आधार कार्ड संशोधन / नाम जोड़ना</span>
                         <span class="lang-en">Jan Aadhaar Correction & Name Addition</span>
                         <span class="price-tag">₹40</span>
                     </div>
@@ -626,8 +627,8 @@
                         <span class="lang-en">Labour Diary Registration / Application</span>
                         <span class="price-tag">₹80</span>
                     </div>
-                    <div class="rate-row" onclick="openServiceDetails('खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाना', 'रसद विभाग खाद्य योजना')">
-                        <span class="lang-hi">खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाना</span>
+                    <div class="rate-row" onclick="openServiceDetails('खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाना', 'रसद विभाग खाद्य योजना')">
+                        <span class="lang-hi">खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाना</span>
                         <span class="lang-en">Food Security (NFSA) Inclusion Apply</span>
                         <span class="price-tag">₹100</span>
                     </div>
@@ -636,11 +637,26 @@
                         <span class="lang-en">Aadhaar Card Download & Color Print</span>
                         <span class="price-tag">₹30</span>
                     </div>
-                    <div class="rate-row" onclick="openServiceDetails('नकद निकासी / मनी ट्रांसफर (AEPS)', 'डिजिटल बैंकिंग डेस्क')">
+                    <div class="rate-row" onclick="openServiceDetails('नकद निकासी / मनी ट्रांसफर (AEPS)', 'डिजिटल banking डेस्क')">
                         <span class="lang-hi">नकद निकासी / मनी ट्रांसफर (AEPS)</span>
                         <span class="lang-en">Cash Withdrawal / Aadhaar Banking</span>
                         <span class="price-tag">नियमानुसार</span>
                     </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">
+                <i class="fas fa-download"></i>
+                <span class="lang-hi">ऑफलाइन फॉर्म डाउनलोड पोर्टल</span>
+                <span class="lang-en">Offline Forms Download Portal</span>
+            </h2>
+            <div class="forms-portal">
+                <div id="formsPortalList" class="forms-portal-grid">
+                    <a href="forms/mool_niwas_form.pdf" class="form-item" target="_blank">
+                        <i class="fas fa-file-pdf" style="color: #dc2626; font-size: 1.2rem;"></i>
+                        <span class="lang-hi">मूल निवास प्रमाण पत्र फॉर्म</span>
+                        <span class="lang-en">Mool Niwas Certificate Form</span>
+                    </a>
                 </div>
             </div>
 
@@ -712,558 +728,45 @@
                             <li><a href="javascript:void(0)" onclick="openVacancyDetails('BSEB Bihar Board Class 10th Matric Result', 'Result')">BSEB Bihar Board Class 10th Matric Result <span class="blink-tag">New</span></a></li>
                             <li><a href="javascript:void(0)" onclick="openVacancyDetails('Railway RRB Technician Grade III Result', 'Result')">Railway RRB Technician Grade III Result</a></li>
                             <li><a href="javascript:void(0)" onclick="openVacancyDetails('SSC Delhi Police Head Constable Final Result', 'Result')">SSC Delhi Police Head Constable Final Result</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('CSBC Bihar Police Constable Merit List Out', 'Result')">CSBC Bihar Police Constable Merit List Out</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('MHA IB Multi Tasking Staff MTS Result 2026', 'Result')">MHA IB Multi Tasking Staff MTS Result 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPPSC Computer Assistant Typing Result', 'Result')">UPPSC Computer Assistant Typing Result</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('EMRS NVS Non-Teaching Tier I Result', 'Result')">EMRS NVS Non-Teaching Tier I Result</a></li>
                         </ul>
-                    </div>
-
-                    <div class="sarkari-card">
-                        <div class="sarkari-card-header keys-head">
-                            <i class="fas fa-key"></i>
-                            <span class="lang-hi">उत्तर कुंजी एवं सिलेबस / Answer Key</span>
-                            <span class="lang-en">Answer Key & Syllabus</span>
-                        </div>
-                        <ul class="sarkari-list">
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UP Police Constable Official Answer Key', 'Answer Key')">UP Police Constable Official Answer Key <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPSC Civil Services IAS Pre Answer Key 2026', 'Answer Key')">UPSC Civil Services IAS Pre Answer Key 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('SSC CGL 2025 Tier II Exam Answer Key', 'Answer Key')">SSC CGL 2025 Tier II Exam Answer Key</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPSC NDA I 2026 Official Answer Key', 'Answer Key')">UPSC NDA I 2026 Official Answer Key</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('SSC MTS & Havaldar Exam Syllabus PDF', 'Syllabus')">SSC MTS & Havaldar Exam Syllabus PDF</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Railway NTPC UG Complete Syllabus 2026', 'Syllabus')">Railway NTPC UG Complete Syllabus 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('RPSC Senior Teacher Recruitment Exam Pattern', 'Syllabus')">RPSC Senior Teacher Recruitment Exam Pattern</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPSSSC Junior Assistant Question Paper Keys', 'Answer Key')">UPSSSC Junior Assistant Question Paper Keys</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sarkari-card">
-                        <div class="sarkari-card-header yojana-head">
-                            <i class="fas fa-hand-holding-heart"></i>
-                            <span class="lang-hi">सरकारी योजना एवं स्कॉलरशिप</span>
-                            <span class="lang-en">Sarkari Yojana & Scholarship</span>
-                        </div>
-                        <ul class="sarkari-list">
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UP Scholarship Online Form 2026 Apply', 'Yojana')">UP Scholarship Online Form 2026 Apply <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('PM Kisan Samman Nidhi Next Kist E-KYC', 'Yojana')">PM Kisan Samman Nidhi Next Kist E-KYC</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan Palanhar Yojana New Registration', 'Yojana')">Rajasthan Palanhar Yojana New Registration</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan Uttar Metric Scholarship Form', 'Yojana')">Rajasthan Uttar Metric Scholarship Form</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('PM Shram Yogi Maandhan Yojana Registration', 'Yojana')">PM Shram Yogi Maandhan Yojana Registration</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Mukhyamantri Ayushman Chiranjeevi Yojana', 'Yojana')">Mukhyamantri Ayushman Chiranjeevi Yojana</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('PM Vishwakarma Tool Kit Subsidy Apply', 'Yojana')">PM Vishwakarma Tool Kit Subsidy Apply</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan Scooty Vitran Yojana Forms', 'Yojana')">Rajasthan Scooty Vitran Yojana Forms</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sarkari-card">
-                        <div class="sarkari-card-header notice-head">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <span class="lang-hi">सरकारी नोटिस एवं करियर न्यूज़</span>
-                            <span class="lang-en">Sarkari Notice & Career News</span>
-                        </div>
-                        <ul class="sarkari-list">
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPSSSC Exam Calendar Year 2026 Notice', 'Notice')">UPSSSC Exam Calendar Year 2026 Notice <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('SSC OTR (One Time Registration) New Rules', 'Notice')">SSC OTR (One Time Registration) New Rules</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('BPSC Exam Date Notice - Auditor Post 2026', 'Notice')">BPSC Exam Date Notice - Auditor Post 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Jharkhand JHTET Last Date Extension Notice', 'Notice')">Jharkhand JHTET Last Date Extension Notice</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UP Self Enumeration Registration Guideline', 'Notice')">UP Self Enumeration Registration Guideline</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Indian Air Force Group C Civilian Age Limit', 'Notice')">Indian Air Force Group C Civilian Age Limit</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan RSSB REET Expected Exam Dates', 'Notice')">Rajasthan RSSB REET Expected Exam Dates</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPPSC LT Teacher Exam Date Change Sheet', 'Notice')">UPPSC LT Teacher Exam Date Change Sheet</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="section-title">
-                <i class="fas fa-print"></i> 
-                <span class="lang-hi">प्रिंटिंग प्रेस, STUDIO एवं कंप्यूटर क्लीनिक दरें</span>
-                <span class="lang-en">Printing Press, Studio & Tech Clinic Commercial Rates</span>
-            </h2>
-            <div class="grid-layout three-cols" style="margin-bottom: 45px;">
-                <div class="rate-card">
-                    <div class="rate-header b-print">
-                        <i class="fas fa-copy"></i>
-                        <div>
-                            <h3 class="lang-hi">डिजिटल प्रिंटिंग प्रेस</h3>
-                            <h3 class="lang-en">Digital Printing Press</h3>
-                        </div>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('शादी कार्ड (Wedding Invitation) आकर्षक डिज़ाइन बुकिंग', 'प्रिंटिंग प्रेस काउंटर')">
-                        <span class="lang-hi">शादी कार्ड (Wedding Invitation) आकर्षक डिज़ाइन</span>
-                        <span class="lang-en">Wedding Invitation Premium Layouts</span>
-                        <span class="price-tag">₹200 <span style="font-size:10px;font-weight:normal;">से शुरू</span></span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('फ्लेक्स बैनर (Flex Banner Printing) उच्च गुणवत्ता छपाई', 'प्रिंटिंग प्रेस काउंटर')">
-                        <span class="lang-hi">फ्लेक्स बैनर (Flex Banner Printing) उच्च गुणवत्ता</span>
-                        <span class="lang-en">High Quality Vibrant Flex Banner Print</span>
-                        <span class="price-tag">₹12 / sq.ft</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('पम्पलेट / विज्ञापन पत्रक प्रिंटिंग (1000 प्रति बल्क)', 'प्रिंटिंग प्रेस काउंटर')">
-                        <span class="lang-hi">पम्पलेट / विज्ञापन पत्रक प्रिंटिंग (1000 प्रति)</span>
-                        <span class="lang-en">Marketing Pamphlets / Flyers (1000 Pcs)</span>
-                        <span class="price-tag">₹999</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('व्यवसायिक विजिटिंग कार्ड (Business Card 100 नग)', 'प्रिंटिंग प्रेस काउंटर')">
-                        <span class="lang-hi">व्यवसायिक विजिटिंग कार्ड (Business Card 100 नग)</span>
-                        <span class="lang-en">Corporate Visiting Cards (100 Pcs)</span>
-                        <span class="price-tag">₹150</span>
-                    </div>
-                </div>
-
-                <div class="rate-card">
-                    <div class="rate-header b-studio">
-                        <i class="fas fa-camera"></i>
-                        <div>
-                            <h3 class="lang-hi">डिजिटल फोटो स्टूडियो</h3>
-                            <h3 class="lang-en">Digital Photo Studio</h3>
-                        </div>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('पासपोर्ट साइज फोटो तुरंत डिलीवरी (8 कॉपी)', 'डिजिटल फोटो स्टूडियो डेस्क')">
-                        <span class="lang-hi">पासपोर्ट साइज फोटो (8 कॉपी तुरंत डिलीवरी)</span>
-                        <span class="lang-en">Passport Size Photos (8 Copies Instant)</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('कलर फोटो प्रिंटिंग ग्लॉसी (4x6 साइज)', 'डिजिटल फोटो स्टूडियो डेस्क')">
-                        <span class="lang-hi">कलर फोटो प्रिंटिंग ग्लॉसी (4x6 साइज)</span>
-                        <span class="lang-en">Glossy Premium Photo Print (4x6 Size)</span>
-                        <span class="price-tag">₹15</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('कलर फोटो प्रिंटिंग ग्लॉसी (A4 फुल साइज)', 'डिजिटल फोटो स्टूडियो डेस्क')">
-                        <span class="lang-hi">कलर फोटो प्रिंटिंग ग्लॉसी (A4 फुल साइज)</span>
-                        <span class="lang-en">Glossy Premium Photo Print (A4 Size)</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('प्रीमियम फ़ोटो फ्रेमिंग एवं कोलाज मेकिंग वर्क', 'डिजिटल फोटो स्टूडियो डेस्क')">
-                        <span class="lang-hi">प्रीमियम फ़ोटो फ्रेमिंग एवं कोलाज मेकिंग</span>
-                        <span class="lang-en">Designer Photo Framing & Collage Crafts</span>
-                        <span class="price-tag">₹199 <span style="font-size:10px;font-weight:normal;">से शुरू</span></span>
-                    </div>
-                </div>
-
-                <div class="rate-card">
-                    <div class="rate-header b-tech">
-                        <i class="fas fa-laptop-medical"></i>
-                        <div>
-                            <h3 class="lang-hi">कंप्यूटर क्लीनिक / लैपटॉप सपोर्ट</h3>
-                            <h3 class="lang-en">Computer Clinic & Support</h3>
-                        </div>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('विंडोज इंस्टॉलेशन एवं ऑपरेटिंग सिस्टम फॉर्मेट सर्विस', 'कंप्यूटर क्लीनिक लैब')">
-                        <span class="lang-hi">विंडोज इंस्टॉलेशन एवं ऑपरेटिंग सिस्टम फॉर्मेट</span>
-                        <span class="lang-en">Windows OS Secure Formatting & Setup</span>
-                        <span class="price-tag">₹250</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('लाइसेंस एंटीवायरस एक्टिवेशन (1 वर्ष अवधि सुरक्षा)', 'कंप्यूटर क्लीनिक लैब')">
-                        <span class="lang-hi">लाइसेंस एंटीवायरस एक्टिवेशन (1 वर्ष अवधि)</span>
-                        <span class="lang-en">Licensed Premium Antivirus (1 Year)</span>
-                        <span class="price-tag">₹350</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('लैपटॉप सर्विसिंग, डस्टिंग एवं थर्मल पेस्ट कूलिंग रिपेयर', 'कंप्यूटर क्लीनिक लैब')">
-                        <span class="lang-hi">लैपटॉप सर्विसिंग, डस्टिंग एवं थर्मल पेस्ट कूलिंग</span>
-                        <span class="lang-en">Laptop Deep Service & Thermal Paste</span>
-                        <span class="price-tag">₹300</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('आवश्यक सॉफ्टवेयर इंस्टॉलेशन एवं ड्राइवर्स सेटअप', 'कंप्यूटर क्लीनिक लैब')">
-                        <span class="lang-hi">आवश्यक सॉफ्टवेयर इंस्टॉलेशन एवं ड्राइवर्स</span>
-                        <span class="lang-en">Essential Software Deployment & Drivers</span>
-                        <span class="price-tag">₹100</span>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="section-title">
-                <i class="fas fa-cloud-download-alt"></i>
-                <span class="lang-hi">ऑफलाइन पीडीएफ फॉर्म्स डाउनलोड एवं सर्च इंजन</span>
-                <span class="lang-en">Offline PDF Forms Download & Search Portal</span>
-            </h2>
-            <div class="forms-portal">
-                <div style="position: relative;">
-                    <i class="fas fa-search" style="position: absolute; left: 16px; top: 16px; color: #94a3b8; font-size: 16px;"></i>
-                    <input type="text" id="formSearchPortal" onkeyup="searchFormsPortal()" placeholder="फॉर्म का नाम यहाँ दर्ज करें... (जैसे: जाति, मूल निवास, आय, पेंशन)" style="width: 100%; padding: 14px 14px 14px 48px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 15px; outline: none; box-shadow: 0 2px 5px rgba(0,0,0,0.02); font-weight: 500;">
-                </div>
-                <div id="formsPortalList" class="forms-portal-grid"></div>
-            </div>
-
-            <h2 class="section-title" id="general-booking-title">
-                <i class="fas fa-bolt"></i>
-                <span class="lang-hi">त्वरित ऑनलाइन फॉर्म बुकिंग सर्विस इंजन</span>
-                <span class="lang-en">Instant Online Form Booking Engine</span>
-            </h2>
-
-            <div class="booking-section-wrapper" id="enquiry-section">
-                <div class="booking-card">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 22px; font-weight: 800; display: flex; align-items: center; gap: 10px; color: var(--primary);">
-                        <i class="fas fa-file-signature" style="color: var(--secondary);"></i>
-                        <span class="lang-hi">आवेदन पत्र एवं दस्तावेज़ प्रेषण बॉक्स</span>
-                        <span class="lang-en">Application & Document Submission</span>
-                    </h3>
-                    
-                    <form onsubmit="handleOrderSubmission(event, 'selectedFormTextArea')">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;" class="grid-layout">
-                            <div>
-                                <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-hi">आवेदक का नाम *</label>
-                                <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-en">Applicant Full Name *</label>
-                                <input type="text" required style="width: 100%; padding: 11px; border-radius: 6px; border: 1px solid var(--card-border); outline: none; font-size: 14px; font-weight: 500;">
-                            </div>
-                            <div>
-                                <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-hi">मोबाइल नंबर (WhatsApp नंबर दें) *</label>
-                                <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-en">WhatsApp Active Mobile No *</label>
-                                <input type="tel" required style="width: 100%; padding: 11px; border-radius: 6px; border: 1px solid var(--card-border); outline: none; font-size: 14px; font-weight: 500;">
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 16px;">
-                            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-hi">चयनित फॉर्म / आवश्यक सेवा का नाम</label>
-                            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-en">Selected Form / Chosen Service</label>
-                            <textarea id="selectedFormTextArea" rows="2" style="width: 100%; padding: 11px; border-radius: 6px; border: 1px solid var(--card-border); outline: none; resize: none; font-size: 14px; font-weight: 500;" placeholder="ऊपर बनी सूचियों पर क्लिक करें या स्वयं टाइप करें..."></textarea>
-                        </div>
-
-                        <div id="dynamicDocumentsContainer" style="margin-bottom: 20px;"></div>
-
-                        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
-                            <button type="button" onclick="addNewDocumentField('dynamicDocumentsContainer')" style="background: #e2e8f0; color: var(--text-dark); border: none; padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background 0.2s;">
-                                <i class="fas fa-plus" style="color:var(--primary);"></i> 
-                                <span class="lang-hi">दस्तावेज़ जोड़ें (Files)</span>
-                                <span class="lang-en">Add Document Field</span>
-                            </button>
-                        </div>
-
-                        <button type="submit" style="width: 100%; padding: 14px; background: linear-gradient(135deg, #0a2540, #1e3a8a); color: white; border: none; border-radius: 6px; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(10,37,64,0.2); transition: all 0.2s;">
-                            <i class="fab fa-whatsapp" style="font-size:17px; margin-right:5px; vertical-align:middle;"></i> 
-                            <span class="lang-hi">व्हाट्सएप के माध्यम से संचालक को भेजें</span>
-                            <span class="lang-en">Send Application Details via WhatsApp</span>
-                        </button>
-                    </form>
-                </div>
-
-                <div class="info-panel">
-                    <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; font-size: 15px;">
-                        <i class="fas fa-shield-alt" style="color: var(--success);"></i>
-                        <span class="lang-hi">सुरक्षित एवं स्वचालित प्रेषण व्यवस्था</span>
-                        <span class="lang-en">Secure & Encrypted Processing</span>
-                    </h4>
-                    <p style="font-size: 13.5px; line-height: 1.6; color: #475569; margin-bottom: 20px;" class="lang-hi">
-                        अपनी वांछित सेवा का चयन करें, आवश्यक विवरण भरें और भेजें बटन दबाएं। यह इंजन आपकी सूचनाओं को व्यवस्थित प्रारूप में हमारे व्हाट्सएप डेस्क तक प्रेषित करता है।
-                    </p>
-                    
-                    <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 16px; border-radius: 8px; font-size: 14px; color: #92400e; display: flex; gap: 12px; align-items: flex-start;">
-                        <i class="fas fa-exclamation-triangle" style="margin-top: 3px; font-size: 16px; color: #d97706;"></i>
-                        <div>
-                            <strong class="lang-hi" style="display:block; margin-bottom:2px;">महत्वपूर्ण सुरक्षा सूचना:</strong>
-                            <span class="lang-hi">दस्तावेज़ (Documents) प्राप्त होने के बाद हमारी टीम फॉर्म को फाइनल सबमिट करने के लिए आपसे ओटीपी (OTP) के लिए संपर्क करेगी।</span>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div id="dynamic-details-view" style="display: none;">
-        <div class="container" style="margin-top: 20px;">
-            <button onclick="closeDetailsView()" class="back-btn">
-                <i class="fas fa-arrow-left"></i> 
-                <span class="lang-hi">मुख्य पृष्ठ पर वापस जाएँ</span>
-                <span class="lang-en">Back to Main Home</span>
-            </button>
-
-            <div class="details-view-box">
-                <span id="details-category-badge" style="background: var(--primary); color: white; padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; text-transform: uppercase;">NOTICE</span>
-                <h2 id="details-view-title" style="color: var(--primary); font-size: 2.2rem; font-weight: 800; margin-top: 15px; margin-bottom: 15px; border-left: 6px solid var(--secondary); padding-left: 15px;">Dynamic Title Here</h2>
-                
-                <div id="details-view-info-content" style="margin: 25px 0; padding: 20px; background: #f8fafc; border: 1px solid var(--card-border); border-radius: 6px; font-size: 15px; line-height: 1.7; color: #334155;">
-                    </div>
-            </div>
-
-            <div class="booking-section-wrapper">
-                <div class="booking-card" style="border: 2px solid var(--secondary);">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 22px; font-weight: 800; display: flex; align-items: center; gap: 10px; color: var(--primary);">
-                        <i class="fas fa-bolt" style="color: var(--secondary);"></i>
-                        <span class="lang-hi">इस सेवा / वैकेंसी के लिए तुरंत यहाँ से बुकिंग करें</span>
-                        <span class="lang-en">Instant Premium Booking Channel</span>
-                    </h3>
-                    
-                    <form onsubmit="handleOrderSubmission(event, 'detailsFormTextArea')">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;" class="grid-layout">
-                            <div>
-                                <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-hi">अपना नाम लिखें *</label>
-                                <input type="text" required style="width: 100%; padding: 11px; border-radius: 6px; border: 1px solid var(--card-border); outline: none; font-size: 14px;">
-                            </div>
-                            <div>
-                                <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-hi">व्हाट्सएप मोबाइल नंबर *</label>
-                                <input type="tel" required style="width: 100%; padding: 11px; border-radius: 6px; border: 1px solid var(--card-border); outline: none; font-size: 14px;">
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 16px;">
-                            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 13px;" class="lang-hi">चुनी गई सेवा / भर्ती</label>
-                            <textarea id="detailsFormTextArea" rows="2" readonly style="width: 100%; padding: 11px; border-radius: 6px; border: 1px solid var(--card-border); background: #f1f5f9; outline: none; resize: none; font-size: 14px; font-weight: 700; color: var(--primary);"></textarea>
-                        </div>
-
-                        <div id="detailsDynamicDocsContainer" style="margin-bottom: 20px;"></div>
-
-                        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
-                            <button type="button" onclick="addNewDocumentField('detailsDynamicDocsContainer')" style="background: #e2e8f0; color: var(--text-dark); border: none; padding: 9px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                                <i class="fas fa-plus" style="color:var(--primary);"></i> 
-                                <span class="lang-hi">अतिरिक्त दस्तावेज़ जोड़ें</span>
-                            </button>
-                        </div>
-
-                        <button type="submit" style="width: 100%; padding: 14px; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 6px; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">
-                            <i class="fab fa-whatsapp" style="font-size:17px; margin-right:5px; vertical-align:middle;"></i> 
-                            <span class="lang-hi">बुकिंग विवरण व्हाट्सएप पर भेजें (Apply Now)</span>
-                        </button>
-                    </form>
-                </div>
-
-                <div class="info-panel" style="background: #fafafa;">
-                    <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; font-size: 15px;">
-                        <i class="fas fa-check-circle" style="color: var(--success);"></i>
-                        <span class="lang-hi">आगे की प्रक्रिया</span>
-                    </h4>
-                    <p style="font-size: 13.5px; line-height: 1.6; color: #475569;" class="lang-hi">
-                        जैसे ही आप हरा बटन दबाएंगे, आपका नाम और चुनी हुई सेवा की व्यवस्थित जानकारी हमारे केंद्र के व्हाट्सएप नंबर पर ट्रांसफर हो जाएगी। हम तुरंत आपका फॉर्म भरना शुरू कर देंगे।
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <footer>
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; text-align: left;">
-            <div>
-                <h4 style="color: var(--secondary); margin-bottom: 18px; font-weight: 700; font-size: 16px;"><span class="lang-hi">हमारे केंद्र के बारे में</span><span class="lang-en">About Our Hub</span></h4>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.6;" class="lang-hi">NK डिजिटल हब खण्डार क्षेत्र में पारदर्शी शुल्क, तीव्र गति एवं विश्वसनीय ग्राहक सेवा के लिए जाना जाता है।</p>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.6;" class="lang-en">NK Digital Hub is highly regarded in Khandar for absolute pricing clarity, fast processing, and top-tier reliability.</p>
-            </div>
-            <div>
-                <h4 style="color: var(--secondary); margin-bottom: 18px; font-weight: 700; font-size: 16px;"><span class="lang-hi">संपर्क सूत्र / लोकेशन</span><span class="lang-en">Contact & Location</span></h4>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.8;">
-                    <i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-right: 5px;"></i> <span class="lang-hi">मुख्य बाजार, बस स्टैंड के पास, खण्डार</span><span class="lang-en">Main Market, Near Bus Stand, Khandar</span><br>
-                    <i class="fas fa-phone" style="color: var(--secondary); margin-right: 5px;"></i> +91 9414925761<br>
-                    <i class="fas fa-envelope" style="color: var(--secondary); margin-right: 5px;"></i> nkdigitalhub@gmail.com
-                </p>
-            </div>
-            <div>
-                <h4 style="color: var(--secondary); margin-bottom: 18px; font-weight: 700; font-size: 16px;"><span class="lang-hi">कार्य समय</span><span class="lang-en">Operational Hours</span></h4>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.8;" class="lang-hi">सोमवार से शनिवार: सुबह 08:00 बजे से रात्रि 08:00 बजे तक<br>रविवार: बंद (विशेष कार्यों के लिए खुला)</p>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.8;" class="lang-en">Monday - Saturday: 08:00 AM to 08:00 PM<br>Sunday: Emergency Work Only</p>
-            </div>
-        </div>
-        <div style="margin-top: 45px; padding-top: 20px; border-top: 1px solid #1e293b; font-size: 12.5px; color: #64748b; letter-spacing: 0.3px;">
-            &copy; 2026 NK Digital Hub. All Rights Reserved. | <span class="lang-hi">सुरक्षित एवं उन्नत संस्करण</span><span class="lang-en">Secure Advanced Portal Edition</span>
-        </div>
+        <p>© 2026 NK डिजिटल हब, खण्डार। सर्वाधिकार सुरक्षित।</p>
     </footer>
 
     <script>
-        // FORMS DATA SOURCE
-        const rajasthanFormsHindi = [
-            "राजस्थान सरकार - जाति प्रमाण पत्र ऑफलाइन फॉर्म (SC/ST/OBC/General)",
-            "राजस्थान सरकार - मूल निवास प्रमाण पत्र प्रारूप (नवीनतम)",
-            "राजस्थान सरकार - आय प्रमाण पत्र (4 पेज नवीनतम प्रारूप)",
-            "राजस्थान सरकार - आय प्रमाण पत्र (1 पेज लघु प्रारूप)",
-            "राजस्थान सरकार - आर्थिक रूप से कमजोर वर्ग (EWS) प्रमाण पत्र आवेदन फॉर्म",
-            "राजस्थान सरकार - जन आधार कार्ड नया नामांकन फॉर्म प्रारूप",
-            "राजस्थान सरकार - जन आधार कार्ड नाम संशोधन / सुधार फॉर्म",
-            "राजस्थान सरकार - राशन कार्ड नया आवेदन / नाम जुड़वाने हेतु ऑफलाइन फॉर्म",
-            "राजस्थान सरकार - वृद्धावस्था पेंशन योजना आवेदन फॉर्म",
-            "राजस्थान सरकार - विधवा महिला सम्मान पेंशन योजना आवेदन प्रारूप",
-            "राजस्थान सरकार - विकलांग (विशेष योग्यजन) सम्मान पेंशन फॉर्म",
-            "राजस्थान सरकार - जन्म पंजीकरण ऑफलाइन आवेदन पत्र",
-            "राजस्थान सरकार - मृत्यु पंजीकरण ऑफलाइन आवेदन पत्र प्रारूप",
-            "राजस्थान सरकार - विवाह पंजीकरण ऑफलाइन फॉर्म",
-            "राजस्थान सरकार - police वेरिफिकेशन प्रमाण पत्र फॉर्म",
-            "राजस्थान सरकार - पालनहार योजना नया आवेदन पत्र प्रारूप",
-            "राजस्थान सरकार - उत्तर मैट्रिक छात्रवृत्ति (Scholarship) ऑफलाइन फॉर्म",
-            "राजस्थान सरकार - श्रमिक कार्ड (Labor Diary) नया पंजीकरण फॉर्म",
-            "राजस्थान सरकार - खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाने का ऑफलाइन फॉर्म"
-        ];
-
-        const rajasthanFormsEnglish = [
-            "Rajasthan Govt - Caste Certificate Offline Application Form (All Categories)",
-            "Rajasthan Govt - Domicile / Bonafide Certificate Official Format",
-            "Rajasthan Govt - Income Certificate (4-Page Comprehensive Latest Format)",
-            "Rajasthan Govt - Jan Aadhaar Card New Enrollment Offline Format",
-            "Rajasthan Govt - New Ration Card / Family Member Addition Form",
-            "Rajasthan Govt - Old Age Social Security Pension Registration Form"
-        ];
-
-        // DUAL LANGUAGE SWITCH MATRIX
         function setLanguage(lang) {
-            const body = document.body;
-            const btnHi = document.getElementById('btn-lang-hi');
-            const btnEn = document.getElementById('btn-lang-en');
-            
-            if (lang === 'hi') {
-                body.classList.remove('lang-en-active');
-                body.classList.add('lang-hi-active');
-                if (btnHi && btnEn) {
-                    btnHi.style.background = 'var(--secondary)';
-                    btnHi.style.color = 'var(--primary)';
-                    btnEn.style.background = 'transparent';
-                    btnEn.style.color = 'white';
-                }
-                document.getElementById('formSearchPortal').placeholder = "फॉर्म का नाम यहाँ दर्ज करें... (जैसे: जाति, मूल निवास, आय, पेंशन)";
-                renderForms(rajasthanFormsHindi);
+            if(lang === 'hi') {
+                document.body.className = "lang-hi-active";
+                document.getElementById('btn-lang-hi').style.background = "var(--secondary)";
+                document.getElementById('btn-lang-hi').style.color = "var(--primary)";
+                document.getElementById('btn-lang-en').style.background = "transparent";
+                document.getElementById('btn-lang-en').style.color = "white";
             } else {
-                body.classList.remove('lang-hi-active');
-                body.classList.add('lang-en-active');
-                if (btnHi && btnEn) {
-                    btnEn.style.background = 'var(--secondary)';
-                    btnEn.style.color = 'var(--primary)';
-                    btnHi.style.background = 'transparent';
-                    btnHi.style.color = 'white';
-                }
-                document.getElementById('formSearchPortal').placeholder = "Search form name here... (e.g. Caste, Domicile, Income, Pension)";
-                renderForms(rajasthanFormsEnglish);
+                document.body.className = "lang-en-active";
+                document.getElementById('btn-lang-en').style.background = "var(--secondary)";
+                document.getElementById('btn-lang-en').style.color = "var(--primary)";
+                document.getElementById('btn-lang-hi').style.background = "transparent";
+                document.getElementById('btn-lang-hi').style.color = "white";
             }
         }
-
-        // FORMS FILTER & DISPLAY SUB-SYSTEMS
-        function renderForms(list) {
-            const box = document.getElementById('formsPortalList');
-            if (!box) return;
-            box.innerHTML = '';
-            
-            if (list.length === 0) {
-                box.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #64748b; padding: 20px; font-weight:600;">कोई फॉर्म नहीं मिला / No Matching Forms Found</div>`;
-                return;
-            }
-            
-            list.forEach(formName => {
-                let divNode = document.createElement('div');
-                divNode.className = 'form-item';
-                divNode.innerHTML = `<i class="fas fa-file-pdf" style="color:#ef4444;"></i> ${formName}`;
-                divNode.onclick = () => {
-                    openServiceDetails(formName, "ऑफलाइन पीडीएफ फॉर्म सेवा");
-                };
-                box.appendChild(divNode);
-            });
+        
+        function openServiceDetails(service, category) {
+            alert("Service Details: " + service + " (" + category + ")");
         }
 
-        function searchFormsPortal() {
-            let query = document.getElementById('formSearchPortal').value.toLowerCase();
-            const isCurrentEn = document.body.classList.contains('lang-en-active');
-            const masterList = isCurrentEn ? rajasthanFormsEnglish : rajasthanFormsHindi;
-            
-            let filtered = masterList.filter(form => form.toLowerCase().includes(query));
-            renderForms(filtered);
-        }
-
-        // REDIRECT ROUTING LOGIC FOR CHANNELS (OPEN SEPARATE VIEW)
-        function openVacancyDetails(title, typeLabel) {
-            document.getElementById('main-homepage-view').style.display = 'none';
-            document.getElementById('dynamic-details-view').style.display = 'block';
-            
-            document.getElementById('details-category-badge').innerText = typeLabel.toUpperCase();
-            document.getElementById('details-category-badge').style.background = 'var(--accent)';
-            document.getElementById('details-view-title').innerText = title;
-            document.getElementById('detailsFormTextArea').value = title;
-            
-            // Auto generating vacancy requirements systematically
-            let infoHtml = `
-                <p style="font-size:16px; margin-bottom:12px;"><strong>📢 वैकेंसी / लाइव अधिसूचना स्टेटस:</strong> ऑनलाइन फॉर्म आवेदन लिंक सक्रिय है। आप हमारे डिजिटल डेस्क के माध्यम से घर बैठे इस फॉर्म को सुरक्षित रूप से भरवा सकते हैं।</p>
-                <h4 style="color:var(--primary); margin-top:15px; margin-bottom:8px;"><i class="fas fa-file-alt"></i> आवश्यक दस्तावेज सूची (Required Documents):</h4>
-                <ul style="padding-left:20px; margin-bottom:15px;">
-                    <li>शैक्षणिक योग्यता मार्कशीट (मार्कशीट के अनुसार नाम और जन्मतिथि मेल खानी चाहिए)</li>
-                    <li>आधार कार्ड / एसएसओ आईडी (यदि राजस्थान भर्ती है तो)</li>
-                    <li>नवीनतम पासपोर्ट साइज रंगीन फोटो (साफ बैकग्राउंड वाली)</li>
-                    <li>हस्ताक्षर (Sign) एवं चालू मोबाइल नंबर / ईमेल आईडी</li>
-                    <li>जाति प्रमाण पत्र एवं मूल निवास पत्र (यदि आयु या शुल्क में छूट चाहिए)</li>
-                </ul>
-                <p style="background:#f0fdf4; border-left:4px solid #10b981; padding:10px; font-weight:600; color:#166534;">👇 नीचे दिए गए बॉक्स में अपनी जानकारी दर्ज कर व्हाट्सएप द्वारा ऑपरेटर को भेजें और अपना फॉर्म पक्का करें।</p>
-            `;
-            document.getElementById('details-view-info-content').innerHTML = infoHtml;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function openServiceDetails(serviceTitle, typeLabel) {
-            document.getElementById('main-homepage-view').style.display = 'none';
-            document.getElementById('dynamic-details-view').style.display = 'block';
-            
-            document.getElementById('details-category-badge').innerText = typeLabel.toUpperCase();
-            document.getElementById('details-category-badge').style.background = 'var(--primary)';
-            document.getElementById('details-view-title').innerText = serviceTitle;
-            document.getElementById('detailsFormTextArea').value = serviceTitle;
-            
-            // Auto generating commercial layout requirements systematically
-            let infoHtml = `
-                <p style="font-size:16px; margin-bottom:12px;"><strong>💼 चयनित सेवा / डिजिटल वर्क:</strong> ${serviceTitle}</p>
-                <h4 style="color:var(--primary); margin-top:15px; margin-bottom:8px;"><i class="fas fa-info-circle"></i> सेवा से संबंधित आवश्यक विवरण:</h4>
-                <p style="margin-bottom:15px;">इस डिजिटल कार्य / प्रमाण पत्र आवेदन को प्रारंभ करने के लिए आपके पास आवश्यक ओरिजिनल दस्तावेज होने अनिवार्य हैं। प्रिंटिंग बैनर के मामले में कृपया अपनी पसंद का टेक्स्ट या साइज नीचे विवरण बॉक्स में जोड़ें।</p>
-                <ul style="padding-left:20px; margin-bottom:15px;">
-                    <li>आधार कार्ड / जन आधार कार्ड प्रतिलिपि</li>
-                    <li>कार्य से संबंधित बुनियादी सूचनाएं (नाम, स्थान, आकार या विशिष्ट नियम)</li>
-                    <li>सरकारी शुल्क + ऑपरेटर सर्विस चार्ज न्यूनतम एवं पारदर्शी दरों पर लागू।</li>
-                </ul>
-                <p style="background:#eff6ff; border-left:4px solid #3b82f6; padding:10px; font-weight:600; color:#1e40af;">👇 त्वरित निष्पादन के लिए नीचे दिए गए फॉर्म बॉक्स को भरें और संचालक के पास व्हाट्सएप फाइल भेजें।</p>
-            `;
-            document.getElementById('details-view-info-content').innerHTML = infoHtml;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function closeDetailsView() {
-            document.getElementById('dynamic-details-view').style.display = 'none';
-            document.getElementById('main-homepage-view').style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function openVacancyDetails(title, type) {
+            alert("Vacancy Notice: " + title + " [" + type + "]");
         }
 
         function scrollToBooking() {
-            document.getElementById('dynamic-details-view').style.display = 'none';
-            document.getElementById('main-homepage-view').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('general-booking-title').scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+            alert("Booking Engine initialized.");
         }
-
-        // DYNAMIC FIELD FACTORY
-        let docFieldCounter = 0;
-        function addNewDocumentField(targetContainerId) {
-            docFieldCounter++;
-            const container = document.getElementById(targetContainerId);
-            const rowNode = document.createElement('div');
-            rowNode.id = `doc-row-id-${docFieldCounter}`;
-            rowNode.style = "display: flex; gap: 10px; margin-bottom: 10px; align-items: center;";
-            
-            rowNode.innerHTML = `
-                <div style="flex: 1;">
-                    <input type="text" placeholder="दस्तावेज़ या विशिष्ट निर्देश दर्ज करें..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--card-border); outline: none; font-size: 13.5px; font-weight: 500;">
-                </div>
-                <button type="button" onclick="document.getElementById('${rowNode.id}').remove()" style="background: #fee2e2; color: #ef4444; border: none; width: 38px; height: 38px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-trash-alt"></i>
-                </button>
-            `;
-            container.appendChild(rowNode);
-        }
-
-        // WHATSAPP COMMUNICATOR TRANSMISSION ENGINE
-        function handleOrderSubmission(event, textAreaId) {
-            event.preventDefault();
-            const inputs = event.target.querySelectorAll('input');
-            const clientName = inputs[0].value;
-            const clientPhone = inputs[1].value;
-            const selectedService = document.getElementById(textAreaId).value;
-            
-            const dynamicInputs = event.target.querySelectorAll('#dynamicDocumentsContainer input, #detailsDynamicDocsContainer input');
-            let docTrackingArray = [];
-            dynamicInputs.forEach(input => {
-                if(input.value.trim() !== "") docTrackingArray.push(input.value.trim());
-            });
-            
-            let docFormattedString = docTrackingArray.length > 0 ? docTrackingArray.join(', ') : 'कोई अलग दस्तावेज़ नहीं जोड़ा गया (None)';
-            
-            let txtTemplate = `नमस्ते *NK डिजिटल हब खण्डार*,\n\nमैं ऑनलाइन सेवा/फॉर्म हेतु आवेदन बुक करना चाहता हूँ:\n\n👤 *आवेदक का नाम:* ${clientName}\n📞 *मोबाइल नंबर:* ${clientPhone}\n📄 *चयनित सेवा/फॉर्म:* ${selectedService}\n📁 *अतिरिक्त दस्तावेज/निर्देश:* ${docFormattedString}\n\nकृपया इस विवरण की जाँच कर मेरा आवेदन प्रोसेस करें। धन्यवाद!`;
-            
-            let encodedString = encodeURIComponent(txtTemplate);
-            window.open(`https://wa.me/919414925761?text=${encodedString}`, '_blank');
-        }
-
-        // INITIALIZER BOOTSTRAP
-        window.onload = () => {
-            setLanguage('hi'); // Default view Hindi
-        };
     </script>
 </body>
 </html>
