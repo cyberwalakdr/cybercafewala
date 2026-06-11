@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK Cyber Cafe Wala - Official Digital Portal</title>
-    <!-- FontAwesome Vector Icons -->
+    <title>NK डिजिटल हब - खण्डार</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Premium Fonts for Professional Look -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gov-navy: #0f2c59;         
-            --gov-blue: #0a70b8;         
-            --gov-light-blue: #f1f6fc;   
-            --gov-gold: #b8860b;         
-            --gov-orange: #e65100;       
-            --text-dark: #1e293b;        
+            /* EXACT COLOR CODES FROM YOUR LIVE SITE */
+            --dark-blue-bg: #0a1d37;     /* Deep Blue Background */
+            --bright-orange: #ff9900;    /* Saffron/Orange Accent */
+            --darker-navy: #061324;      /* Top Bar Background */
             --pure-white: #ffffff;
-            --border-color: #cbd5e1;
+            --text-light: #f3f4f6;
         }
 
         * {
@@ -29,20 +25,19 @@
         }
 
         body {
-            background-color: #f8fafc;
-            color: var(--text-dark);
+            background-color: var(--dark-blue-bg);
+            color: var(--text-light);
         }
 
-        /* Top Action Bar */
+        /* Top Bar matching with deep dark navy */
         .top-utility-bar {
-            background: linear-gradient(90deg, var(--gov-navy), #0a1d3a);
+            background: var(--darker-navy);
             padding: 12px 6%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             gap: 15px;
-            border-bottom: 3px solid var(--gov-gold);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+            border-bottom: 2px solid var(--bright-orange);
         }
 
         .action-btn {
@@ -58,28 +53,21 @@
             align-items: center;
             gap: 8px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             transition: all 0.2s ease;
         }
 
         .action-btn:hover {
-            background: var(--gov-blue);
-            border-color: var(--gov-blue);
-            transform: translateY(-1px);
+            background: var(--bright-orange);
+            color: #000;
+            border-color: var(--bright-orange);
         }
 
-        .action-btn.lang-active {
-            background: var(--gov-orange);
-            border-color: var(--gov-orange);
-            font-weight: 600;
-        }
-
-        /* Main Header Architecture */
+        /* Header Layout Engine */
         .main-header {
-            background: var(--pure-white);
-            padding: 30px 4%;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
-            border-bottom: 4px solid var(--gov-navy);
+            background: linear-gradient(135deg, var(--dark-blue-bg) 0%, #051324 100%);
+            padding: 40px 4%;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+            border-bottom: 4px solid var(--bright-orange);
         }
 
         .header-wrapper {
@@ -91,12 +79,12 @@
             gap: 30px;
         }
 
-        /* Side Logo Containers (EMITRA & CSC) */
+        /* Side Logo Containers (EMITRA & CSC Side Frames) */
         .side-logo-container {
             width: 160px;
             height: 140px;
-            background: var(--pure-white);
-            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid transparent;
             border-radius: 6px;
             display: flex;
             flex-direction: column;
@@ -105,13 +93,14 @@
             gap: 10px;
             padding: 12px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
         }
 
         .side-logo-container:hover {
-            border-color: var(--gov-blue);
-            transform: translateY(-2px);
+            border-color: var(--bright-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
         }
 
         .side-img {
@@ -123,11 +112,10 @@
         .side-logo-container span {
             font-size: 0.75rem;
             font-weight: 700;
-            color: var(--gov-navy);
-            letter-spacing: 0.3px;
+            color: #0a1d37;
         }
 
-        /* Center Brand Block */
+        /* Center Section Elements */
         .brand-center-block {
             flex: 1;
             text-align: center;
@@ -136,21 +124,21 @@
             align-items: center;
         }
 
-        /* Shop Logo Premium Layout Box */
+        /* Frame for MYLOGO.png */
         .shop-main-logo {
             width: 140px;
             height: 140px;
             object-fit: cover;
             border-radius: 8px; 
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
             border: 3px solid var(--pure-white);
-            outline: 1px solid var(--border-color);
             background: #ffffff;
             transition: transform 0.3s ease;
         }
 
         .shop-main-logo:hover {
-            transform: scale(1.03);
+            transform: scale(1.04);
+            outline: 2px solid var(--bright-orange);
         }
 
         .title-row-container {
@@ -158,63 +146,69 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
-            margin-top: 15px;
+            margin-top: 20px;
             width: 100%;
         }
 
+        /* Title Split Color matching live site */
         .brand-title-text {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            color: var(--gov-navy);
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
+        .brand-title-text .white-text {
+            color: var(--pure-white);
+        }
+
+        .brand-title-text .orange-text {
+            color: var(--bright-orange);
+        }
+
         .owner-badge {
-            background: #fffbeb;
-            color: #b45309;
-            border: 1px solid #fde68a;
+            background: rgba(255, 153, 0, 0.15);
+            color: var(--bright-orange);
+            border: 1px solid var(--bright-orange);
             padding: 4px 12px;
             border-radius: 4px;
             font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
         .tagline-badge {
-            background: var(--gov-light-blue);
-            color: var(--gov-blue);
-            padding: 8px 24px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-light);
+            padding: 10px 28px;
             border-radius: 4px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 10px;
+            font-weight: 500;
+            font-size: 1.15rem;
+            margin-top: 12px;
             display: inline-block;
-            border-left: 4px solid var(--gov-blue);
-            border-top: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
+            border-left: 4px solid var(--bright-orange);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-left: 4px solid var(--bright-orange);
         }
 
         .desc-text {
-            font-size: 1rem;
-            color: #b45309; 
-            font-weight: 600;
+            font-size: 0.98rem;
+            color: #e2e8f0; 
             max-width: 900px;
             margin-top: 15px;
             line-height: 1.6;
+            opacity: 0.9;
         }
 
-        /* Interactive Modal System */
+        /* Interactive Windows (Modals) */
         .modal-blur-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 44, 89, 0.6);
+            background: rgba(6, 19, 36, 0.8);
             backdrop-filter: blur(5px);
             display: flex;
             align-items: center;
@@ -236,11 +230,12 @@
             width: 100%;
             max-width: 450px;
             border-radius: 6px;
-            border-top: 5px solid var(--gov-blue);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-top: 5px solid var(--dark-blue-bg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             transform: translateY(15px);
             transition: all 0.3s ease;
             position: relative;
+            color: #1e293b;
         }
 
         .modal-blur-overlay.show .interactive-card {
@@ -264,8 +259,8 @@
         }
 
         .exit-btn:hover {
-            background: var(--gov-orange);
-            color: white;
+            background: var(--bright-orange);
+            color: black;
         }
 
         .form-heading {
@@ -277,7 +272,7 @@
 
         .form-heading h3 {
             font-size: 1.5rem;
-            color: var(--gov-navy);
+            color: var(--dark-blue-bg);
             font-weight: 700;
         }
 
@@ -290,7 +285,7 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 8px;
-            color: var(--text-dark);
+            color: #334155;
         }
 
         .field-container {
@@ -315,15 +310,9 @@
             background: #f8fafc;
         }
 
-        .custom-input:focus {
-            border-color: var(--gov-blue);
-            background: var(--pure-white);
-            box-shadow: 0 0 0 3px rgba(10, 112, 184, 0.15);
-        }
-
         .pro-submit-btn {
             width: 100%;
-            background: var(--gov-navy);
+            background: var(--dark-blue-bg);
             color: var(--pure-white);
             border: none;
             padding: 14px;
@@ -332,13 +321,13 @@
             font-weight: 600;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             transition: all 0.2s;
             margin-top: 10px;
         }
 
         .pro-submit-btn:hover {
-            background: var(--gov-blue);
+            background: var(--bright-orange);
+            color: black;
         }
 
         .switch-form-text {
@@ -349,12 +338,11 @@
         }
 
         .switch-form-text a {
-            color: var(--gov-blue);
+            color: var(--dark-blue-bg);
             text-decoration: none;
             font-weight: 600;
         }
 
-        /* Mobile Optimization */
         @media (max-width: 992px) {
             .header-wrapper {
                 flex-direction: column;
@@ -365,14 +353,13 @@
                 gap: 5px;
             }
             .brand-title-text {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Utility Management Bar -->
     <div class="top-utility-bar">
         <button class="action-btn" onclick="toggleSystemLanguage()" id="langBtn">
             <i class="fa-solid fa-language"></i> Switch to English
@@ -385,23 +372,21 @@
         </button>
     </div>
 
-    <!-- Live Header Section -->
     <header class="main-header">
         <div class="header-wrapper">
             
-            <!-- LEFT LOGO: E-MITRA -->
             <div class="side-logo-container">
                 <img src="EMITRA.png" alt="E-Mitra" class="side-img">
                 <span>E-MITRA SERVICES</span>
             </div>
 
-            <!-- CENTRAL BRAND IDENTITY ENGINE -->
             <div class="brand-center-block">
-                <!-- NOW MATCHES PERFECTLY WITH YOUR MYLOGO.png ASSET -->
-                <img src="MYLOGO.png" alt="NK Cyber Cafe Wala Emblem" class="shop-main-logo">
+                <img src="MYLOGO.png" alt="NK Cyber Cafe Wala" class="shop-main-logo">
                 
                 <div class="title-row-container">
-                    <h1 class="brand-title-text" id="mainTitle">NK Cyber Cafe Wala</h1>
+                    <h1 class="brand-title-text" id="mainTitle">
+                        <span class="white-text">NK</span> <span class="orange-text">डिजिटल हब</span>
+                    </h1>
                     <span class="owner-badge">Owner – Nafshad Khan</span>
                 </div>
                 
@@ -414,7 +399,6 @@
                 </p>
             </div>
 
-            <!-- RIGHT LOGO: CSC DIGITAL SEVA -->
             <div class="side-logo-container">
                 <img src="CSC.png" alt="CSC" class="side-img">
                 <span>CSC DIGITAL SEVA</span>
@@ -423,15 +407,13 @@
         </div>
     </header>
 
-
-    <!-- MODAL ENGINE: LOGIN SYSTEM -->
     <div class="modal-blur-overlay" id="loginBox">
         <div class="interactive-card">
             <button class="exit-btn" onclick="shutModal('loginBox')"><i class="fa-solid fa-xmark"></i></button>
             <div class="form-heading">
                 <h3 id="loginHeading">यूजर लॉगिन</h3>
             </div>
-            <form onsubmit="event.preventDefault(); alert('Dashboard Access Granted.');">
+            <form onsubmit="event.preventDefault(); alert('Access Granted.');">
                 <div class="input-block">
                     <label id="lblUser">ईमेल / यूजरनाम</label>
                     <div class="field-container">
@@ -454,8 +436,6 @@
         </div>
     </div>
 
-
-    <!-- MODAL ENGINE: REGISTRATION SYSTEM -->
     <div class="modal-blur-overlay" id="registerBox">
         <div class="interactive-card">
             <button class="exit-btn" onclick="shutModal('registerBox')"><i class="fa-solid fa-xmark"></i></button>
@@ -492,13 +472,12 @@
         </div>
     </div>
 
-    <!-- LANGUAGE CORE ENGINE -->
     <script>
         let currentLang = 'HI';
 
         const contentData = {
             EN: {
-                title: "NK Cyber Cafe Wala",
+                title: '<span class="white-text">NK</span> <span class="orange-text">Digital Hub</span>',
                 tagline: "E-Mitra, CSC, Printing Press & Computer Clinic, Khandar",
                 desc: "The most trusted and reliable technical & online solution hub of Khandar region. Specialized in government & non-government online applications, premium quality flex printing, and computer repair works.",
                 langBtnText: "<i class='fa-solid fa-language'></i> Switch to हिंदी",
@@ -513,7 +492,7 @@
                 btnRegSubmit: "Register Now"
             },
             HI: {
-                title: "NK Cyber Cafe Wala",
+                title: '<span class="white-text">NK</span> <span class="orange-text">डिजिटल हब</span>',
                 tagline: "ई-मित्र, सीएससी, PRINTING PRESS एवं कंप्यूटर क्लीनिक, खण्डार",
                 desc: "खण्डार क्षेत्र का सबसे भरोसेमंद एवं विश्वसनीय तकनीकी व ऑनलाइन समाधान केंद्र। सभी सरकारी एवं गैर-सरकारी ऑनलाइन फॉर्म, उच्च गुणवत्ता फ्लेक्स प्रिंटिंग, एवं कंप्यूटर रिपेयरिंग समाधान।",
                 langBtnText: "<i class='fa-solid fa-language'></i> Switch to English",
@@ -539,7 +518,7 @@
                 btn.classList.remove('lang-active');
             }
 
-            document.getElementById('mainTitle').innerText = contentData[currentLang].title;
+            document.getElementById('mainTitle').innerHTML = contentData[currentLang].title;
             document.getElementById('tagline').innerText = contentData[currentLang].tagline;
             document.getElementById('mainDesc').innerText = contentData[currentLang].desc;
             btn.innerHTML = contentData[currentLang].langBtnText;
