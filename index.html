@@ -1,772 +1,575 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6580826949054175"
-     crossorigin="anonymous"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NK डिजिटल हब - ई-मित्र, सीएससी, प्रिंटिंग प्रेस एवं कंप्यूटर क्लीनिक, खण्डार</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>NK Cyber Cafe Wala - Official Digital Portal</title>
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Premium Fonts for Professional Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #0a2540;
-            --secondary: #ff9900;
-            --accent: #dc2626;
-            --bg-light: #f4f6f9;
-            --text-dark: #1e293b;
-            --card-border: #e2e8f0;
-            --success: #10b981;
+            --gov-navy: #0f2c59;         
+            --gov-blue: #0a70b8;         
+            --gov-light-blue: #f1f6fc;   
+            --gov-gold: #b8860b;         
+            --gov-orange: #e65100;       
+            --text-dark: #1e293b;        
+            --pure-white: #ffffff;
+            --border-color: #cbd5e1;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: #f8fafc;
             color: var(--text-dark);
-            position: relative;
-            min-height: 100vh;
         }
 
-        /* PREMIUM DYNAMIC WATERMARK BACKGROUND */
-        body::before {
-            content: "NK DIGITAL  •  E-MITRA  •  PRINTING PRESS  •  STUDIO  •  TECH CLINIC";
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-25deg);
-            font-size: 5rem;
-            font-weight: 900;
-            color: rgba(10, 37, 64, 0.02);
-            letter-spacing: 12px;
-            white-space: nowrap;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        /* STICKY PORTAL NAVIGATION BAR */
-        .sticky-title-bar {
-            background: #0f172a;
-            color: white;
-            padding: 12px 24px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        /* Top Action Bar */
+        .top-utility-bar {
+            background: linear-gradient(90deg, var(--gov-navy), #0a1d3a);
+            padding: 12px 6%;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .bar-alert {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .portal-nav {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .portal-nav a {
-            color: #f1f5f9;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            background: rgba(255,255,255,0.08);
-            padding: 6px 14px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .portal-nav a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            font-weight: 600;
-            border-color: var(--secondary);
-        }
-
-        /* MEGA IDENTITY BRAND HEADER */
-        header {
-            background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e3a8a 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 6px solid var(--secondary);
-            position: relative;
-        }
-
-        .header-logos {
-            display: flex;
-            justify-content: center;
             gap: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
+            border-bottom: 3px solid var(--gov-gold);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
         }
 
-        .logo-badge {
-            background: white;
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-weight: 800;
-            font-size: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            letter-spacing: 0.5px;
-        }
-        .b-emitra { border-left: 4px solid #ff6600; }
-        .b-csc { border-left: 4px solid #0066cc; }
-        .b-print { border-left: 4px solid #ec4899; }
-        .b-studio { border-left: 4px solid #a855f7; }
-        .b-tech { border-left: 4px solid #10b981; }
-
-        .brand-box h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-        }
-
-        .brand-box h1 span {
-            color: var(--secondary);
-        }
-
-        .brand-box .tagline {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #f1f5f9;
-            margin-top: 15px;
-        }
-
-        .brand-box .sub-tagline {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            color: #94a3b8;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-
-        /* LAYOUT ARCHITECTURE */
-        .container {
-            max-width: 1300px;
-            margin: 40px auto;
-            padding: 0 24px;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin: 50px 0 25px 0;
-            border-left: 6px solid var(--secondary);
-            padding-left: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-        }
-
-        .grid-layout {
-            display: grid;
-            gap: 25px;
-        }
-
-        .three-cols {
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        }
-
-        /* PREMIUM RATE CARDS */
-        .rate-card {
-            background: white;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .rate-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px rgba(10, 37, 64, 0.08);
-            border-color: #cbd5e1;
-        }
-
-        .rate-header {
-            background: #f8fafc;
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--card-border);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .rate-header i {
-            font-size: 1.6rem;
-            color: var(--primary);
-        }
-
-        .rate-header h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .rate-row {
-            padding: 14px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px dashed #f1f5f9;
-            font-size: 14.5px;
+        .action-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--pure-white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 18px;
+            font-size: 0.85rem;
             font-weight: 500;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .rate-row:hover {
-            background: #fffbeb;
-        }
-
-        .rate-row:last-child {
-            border-bottom: none;
-        }
-
-        .price-tag {
-            background: #f0fdf4;
-            color: #166534;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 14px;
-            border: 1px solid #bbf7d0;
-        }
-
-        /* SARKARI RESULT CENTER STYLING */
-        .sarkari-container {
-            background: white;
-            border: 2px solid #0a2540;
-            border-radius: 8px;
-            margin-bottom: 35px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-
-        .sarkari-marquee-box {
-            background: #dc2626;
-            color: white;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            gap: 12px;
-            border-bottom: 2px solid var(--secondary);
-        }
-
-        .sarkari-marquee-box marquee a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 40px;
-            font-size: 14px;
-        }
-
-        .sarkari-marquee-box marquee a:hover {
-            color: var(--secondary);
-            text-decoration: underline;
-        }
-
-        .sarkari-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 1px;
-            background: #cbd5e1;
-        }
-
-        .sarkari-card {
-            background: white;
-            padding: 16px;
-        }
-
-        .sarkari-card-header {
-            color: white;
-            padding: 10px 14px;
-            font-weight: 700;
-            font-size: 15px;
             border-radius: 4px;
-            margin-bottom: 12px;
+            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-        }
-        .sarkari-card-header.jobs-head { background: #1e3a8a; }
-        .sarkari-card-header.admit-head { background: #b91c1c; }
-        .sarkari-card-header.results-head { background: #047857; }
-        .sarkari-card-header.keys-head { background: #6b21a8; }
-        .sarkari-card-header.yojana-head { background: #c2410c; }
-        .sarkari-card-header.notice-head { background: #0369a1; }
-
-        .sarkari-list {
-            list-style: none;
-            max-height: 250px;
-            overflow-y: auto;
-            padding-right: 5px;
-        }
-
-        .sarkari-list::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        .sarkari-list::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 4px;
-        }
-
-        .sarkari-list li {
-            padding: 9px 0;
-            border-bottom: 1px dashed #e2e8f0;
-            font-size: 13.5px;
-            line-height: 1.4;
-        }
-
-        .sarkari-list li a {
-            color: #1e293b;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.1s ease;
-        }
-
-        .sarkari-list li a:hover {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-
-        .blink-tag {
-            background: #dc2626;
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: bold;
-            margin-left: 5px;
-            animation: blinkAnimation 0.8s infinite alternate;
-            display: inline-block;
-        }
-
-        @keyframes blinkAnimation {
-            from { opacity: 1; }
-            to { opacity: 0.3; }
-        }
-
-        /* OFFLINE FORMS PORTAL STYLING */
-        .forms-portal {
-            background: #f8fafc;
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
-        }
-
-        .forms-portal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 12px;
-            max-height: 380px;
-            overflow-y: auto;
-            padding-right: 8px;
-            margin-top: 15px;
-        }
-
-        .form-item {
-            background: white;
-            padding: 14px 16px;
-            border-radius: 6px;
-            border: 1px solid var(--card-border);
-            cursor: pointer;
-            font-size: 13.5px;
-            font-weight: 600;
             transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background: var(--gov-blue);
+            border-color: var(--gov-blue);
+            transform: translateY(-1px);
+        }
+
+        .action-btn.lang-active {
+            background: var(--gov-orange);
+            border-color: var(--gov-orange);
+            font-weight: 600;
+        }
+
+        /* Main Header Architecture */
+        .main-header {
+            background: var(--pure-white);
+            padding: 30px 4%;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--gov-navy);
+        }
+
+        .header-wrapper {
             display: flex;
             align-items: center;
-            gap: 8px;
-            color: #334155;
-            text-decoration: none;
-        }
-
-        .form-item:hover {
-            border-color: var(--secondary);
-            background: #fffbeb;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(255,153,0,0.1);
-            color: var(--primary);
-        }
-
-        /* LIVE ORDER ENGINE */
-        .booking-section-wrapper {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
+            justify-content: space-between;
+            max-width: 1500px;
+            margin: 0 auto;
             gap: 30px;
-            margin-top: 20px;
         }
 
-        .booking-card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-        }
-
-        .info-panel {
-            background: #f8fafc;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
+        /* Side Logo Containers (EMITRA & CSC) */
+        .side-logo-container {
+            width: 160px;
+            height: 140px;
+            background: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        /* DYNAMIC DETAILS PAGE SYSTEM */
-        .back-btn {
-            background: #1e293b;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background 0.2s;
-            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 25px;
-        }
-        .back-btn:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-        .details-view-box {
-            background: white;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        /* LANGUAGE SYSTEM DISPLAY CONFIG */
-        body.lang-hi-active .lang-en { display: none !important; }
-        body.lang-en-active .lang-hi { display: none !important; }
-
-        /* FOOTER HARDWARE */
-        footer {
-            background: #0f172a;
-            color: white;
-            padding: 50px 24px 30px 24px;
-            margin-top: 80px;
-            border-top: 5px solid var(--secondary);
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
             text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
         }
 
+        .side-logo-container:hover {
+            border-color: var(--gov-blue);
+            transform: translateY(-2px);
+        }
+
+        .side-img {
+            width: 100%;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .side-logo-container span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gov-navy);
+            letter-spacing: 0.3px;
+        }
+
+        /* Center Brand Block */
+        .brand-center-block {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Shop Logo Premium Layout Box */
+        .shop-main-logo {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px; 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border: 3px solid var(--pure-white);
+            outline: 1px solid var(--border-color);
+            background: #ffffff;
+            transition: transform 0.3s ease;
+        }
+
+        .shop-main-logo:hover {
+            transform: scale(1.03);
+        }
+
+        .title-row-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .brand-title-text {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gov-navy);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .owner-badge {
+            background: #fffbeb;
+            color: #b45309;
+            border: 1px solid #fde68a;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tagline-badge {
+            background: var(--gov-light-blue);
+            color: var(--gov-blue);
+            padding: 8px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            display: inline-block;
+            border-left: 4px solid var(--gov-blue);
+            border-top: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .desc-text {
+            font-size: 1rem;
+            color: #b45309; 
+            font-weight: 600;
+            max-width: 900px;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        /* Interactive Modal System */
+        .modal-blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 44, 89, 0.6);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .modal-blur-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .interactive-card {
+            background: var(--pure-white);
+            padding: 45px 40px;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 6px;
+            border-top: 5px solid var(--gov-blue);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .modal-blur-overlay.show .interactive-card {
+            transform: translateY(0);
+        }
+
+        .exit-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f1f5f9;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+        }
+
+        .exit-btn:hover {
+            background: var(--gov-orange);
+            color: white;
+        }
+
+        .form-heading {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+
+        .form-heading h3 {
+            font-size: 1.5rem;
+            color: var(--gov-navy);
+            font-weight: 700;
+        }
+
+        .input-block {
+            margin-bottom: 20px;
+        }
+
+        .input-block label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .field-container {
+            position: relative;
+        }
+
+        .field-container i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .custom-input {
+            width: 100%;
+            padding: 12px 15px 12px 42px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            outline: none;
+            background: #f8fafc;
+        }
+
+        .custom-input:focus {
+            border-color: var(--gov-blue);
+            background: var(--pure-white);
+            box-shadow: 0 0 0 3px rgba(10, 112, 184, 0.15);
+        }
+
+        .pro-submit-btn {
+            width: 100%;
+            background: var(--gov-navy);
+            color: var(--pure-white);
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+            margin-top: 10px;
+        }
+
+        .pro-submit-btn:hover {
+            background: var(--gov-blue);
+        }
+
+        .switch-form-text {
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 20px;
+            color: #64748b;
+        }
+
+        .switch-form-text a {
+            color: var(--gov-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Mobile Optimization */
         @media (max-width: 992px) {
-            .booking-section-wrapper {
-                grid-template-columns: 1fr;
+            .header-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .title-row-container {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .brand-title-text {
+                font-size: 2.2rem;
             }
         }
     </style>
 </head>
-<body class="lang-hi-active">
+<body>
 
-    <div class="sticky-title-bar">
-        <div class="bar-alert">
-            <i class="fas fa-bullhorn"></i>
-            <marquee scrollamount="4" style="width: 320px; vertical-align: middle;">
-                <span class="lang-hi">NK डिजिटल हब पर आपका स्वागत है! सभी सरकारी फॉर्म एवं हाई-स्पीड प्रिंटिंग प्रेस सुविधाएं उपलब्ध हैं।</span>
-                <span class="lang-en">Welcome to NK Digital Hub! All types of government applications and premium printing services are live.</span>
-            </marquee>
-        </div>
-        <div class="portal-nav">
-            <a href="https://sso.rajasthan.gov.in" target="_blank"><i class="fas fa-key"></i> SSO Portal</a>
-            <a href="https://jansoochna.rajasthan.gov.in" target="_blank"><i class="fas fa-info-circle"></i> Jan Soochna</a>
-            <a href="javascript:void(0)" onclick="scrollToBooking()"><i class="fas fa-edit"></i> <span class="lang-hi">ऑर्डर बुक करें</span><span class="lang-en">Book Order</span></a>
+    <!-- Utility Management Bar -->
+    <div class="top-utility-bar">
+        <button class="action-btn" onclick="toggleSystemLanguage()" id="langBtn">
+            <i class="fa-solid fa-language"></i> Switch to English
+        </button>
+        <button class="action-btn" onclick="launchModal('loginBox')">
+            <i class="fa-solid fa-user-shield"></i> Login
+        </button>
+        <button class="action-btn" onclick="launchModal('registerBox')">
+            <i class="fa-solid fa-user-plus"></i> Register
+        </button>
+    </div>
+
+    <!-- Live Header Section -->
+    <header class="main-header">
+        <div class="header-wrapper">
             
-            <div style="display: inline-flex; background: rgba(255,255,255,0.15); border-radius: 6px; padding: 2px; margin-left: 5px;">
-                <button onclick="setLanguage('hi')" id="btn-lang-hi" style="background: var(--secondary); color: var(--primary); border: none; padding: 4px 12px; font-size: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: all 0.2s;">हिन्दी</button>
-                <button onclick="setLanguage('en')" id="btn-lang-en" style="background: transparent; color: white; border: none; padding: 4px 12px; font-size: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: all 0.2s;">English</button>
+            <!-- LEFT LOGO: E-MITRA -->
+            <div class="side-logo-container">
+                <img src="EMITRA.png" alt="E-Mitra" class="side-img">
+                <span>E-MITRA SERVICES</span>
             </div>
+
+            <!-- CENTRAL BRAND IDENTITY ENGINE -->
+            <div class="brand-center-block">
+                <!-- NOW MATCHES PERFECTLY WITH YOUR MYLOGO.png ASSET -->
+                <img src="MYLOGO.png" alt="NK Cyber Cafe Wala Emblem" class="shop-main-logo">
+                
+                <div class="title-row-container">
+                    <h1 class="brand-title-text" id="mainTitle">NK Cyber Cafe Wala</h1>
+                    <span class="owner-badge">Owner – Nafshad Khan</span>
+                </div>
+                
+                <div class="tagline-badge" id="tagline">
+                    ई-मित्र, सीएससी, PRINTING PRESS एवं कंप्यूटर क्लीनिक, खण्डार
+                </div>
+                
+                <p class="desc-text" id="mainDesc">
+                    खण्डार क्षेत्र का सबसे भरोसेमंद एवं विश्वसनीय तकनीकी व ऑनलाइन समाधान केंद्र। सभी सरकारी एवं गैर-सरकारी ऑनलाइन फॉर्म, उच्च गुणवत्ता फ्लेक्स प्रिंटिंग, एवं कंप्यूटर रिपेयरिंग समाधान।
+                </p>
+            </div>
+
+            <!-- RIGHT LOGO: CSC DIGITAL SEVA -->
+            <div class="side-logo-container">
+                <img src="CSC.png" alt="CSC" class="side-img">
+                <span>CSC DIGITAL SEVA</span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- MODAL ENGINE: LOGIN SYSTEM -->
+    <div class="modal-blur-overlay" id="loginBox">
+        <div class="interactive-card">
+            <button class="exit-btn" onclick="shutModal('loginBox')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="form-heading">
+                <h3 id="loginHeading">यूजर लॉगिन</h3>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Dashboard Access Granted.');">
+                <div class="input-block">
+                    <label id="lblUser">ईमेल / यूजरनाम</label>
+                    <div class="field-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" class="custom-input" placeholder="Username or email" required>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <label id="lblPass">पासवर्ड</label>
+                    <div class="field-container">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" class="custom-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="pro-submit-btn" id="btnLoginSubmit">डैशबोर्ड लॉगिन करें</button>
+                <div class="switch-form-text">
+                    New User? <a href="#" onclick="shutModal('loginBox'); launchModal('registerBox');">Create account</a>
+                </div>
+            </form>
         </div>
     </div>
 
-    <div id="main-homepage-view">
-        <header>
-            <div class="header-logos">
-                <div class="logo-badge b-emitra">E-MITRA</div>
-                <div class="logo-badge b-csc">CSC PORTAL</div>
-                <div class="logo-badge b-print">PRINTING PRESS</div>
-                <div class="logo-badge b-studio">PHOTO STUDIO</div>
-                <div class="logo-badge b-tech">COMPUTER CLINIC</div>
+
+    <!-- MODAL ENGINE: REGISTRATION SYSTEM -->
+    <div class="modal-blur-overlay" id="registerBox">
+        <div class="interactive-card">
+            <button class="exit-btn" onclick="shutModal('registerBox')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="form-heading">
+                <h3 id="regHeading">नया रजिस्ट्रेशन</h3>
             </div>
-            <div class="brand-box">
-                <h1 class="lang-hi">NK <span>डिजिटल हब</span></h1>
-                <h1 class="lang-en">NK <span>Digital Hub</span></h1>
-                
-                <p class="tagline lang-hi">ई-मित्र, सीएससी, प्रिंटिंग प्रेस एवं कंप्यूटर क्लीनिक, खण्डार</p>
-                <p class="tagline lang-en">E-Mitra, CSC, Printing Press & Computer Clinic, Khandar</p>
-                
-                <p class="sub-tagline lang-hi">खण्डार क्षेत्र का सबसे भरोसेमंद एवं विश्वसनीय तकनीकी व ऑनलाइन समाधान केंद्र। सभी सरकारी एवं गैर-सरकारी ऑनलाइन फॉर्म, उच्च गुणवत्ता फ्लेक्स प्रिंटिंग, एवं कंप्यूटर रिपेयरिंग समाधान।</p>
-                <p class="sub-tagline lang-en">The most premium and reliable technical hub in the Khandar region. Delivering high-speed government forms processing, premium flex banners, photography, and advanced computer repair services.</p>
-            </div>
-        </header>
-
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-university"></i> 
-                <span class="lang-hi">ई-मित्र एवं सीएससी (CSC) सरकारी सेवा शुल्क सूची</span>
-                <span class="lang-en">E-Mitra & CSC Government Service Fee Directory</span>
-            </h2>
-            <div class="grid-layout three-cols" style="margin-bottom: 45px;">
-                <div class="rate-card">
-                    <div class="rate-header b-emitra">
-                        <i class="fas fa-id-card"></i>
-                        <div>
-                            <h3 class="lang-hi">प्रमाण पत्र एवं राजस्व सेवाएं</h3>
-                            <h3 class="lang-en">Certificates & Revenue Scope</h3>
-                        </div>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('जाति प्रमाण पत्र आवेदन (SC/ST/OBC/Gen)', 'ई-मित्र सेवा (प्रमाण पत्र)')">
-                        <span class="lang-hi">जाति प्रमाण पत्र आवेदन पत्र ऑफलाइन / ऑनलाइन</span>
-                        <span class="lang-en">Caste Certificate Offline/Online Process</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('मूल निवास प्रमाण पत्र आवेदन', 'ई-मित्र सेवा (प्रमाण पत्र)')">
-                        <span class="lang-hi">मूल निवास प्रमाण पत्र प्रारूप आवेदन</span>
-                        <span class="lang-en">Bonafide/Domicile Certificate Processing</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('आय प्रमाण पत्र फिलिंग सहायता', 'ई-मित्र सेवा (प्रमाण पत्र)')">
-                        <span class="lang-hi">आय प्रमाण पत्र (नवीनतम प्रारूप ) फिलिंग</span>
-                        <span class="lang-en">Income Certificate Filing Assistance</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('ईडब्ल्यूएस (EWS) प्रमाण पत्र नया आवेदन', 'ई-मित्र सेवा (प्रमाण पत्र)')">
-                        <span class="lang-hi">ईडब्ल्यूएस (EWS) प्रमाण पत्र नया आवेदन</span>
-                        <span class="lang-en">EWS Certificate New Registration</span>
-                        <span class="price-tag">₹70</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('हैसियत प्रमाण पत्र (Solvency Certificate)', 'ई-मित्र सेवा (राजस्व)')">
-                        <span class="lang-hi">हैसियत प्रमाण पत्र (Solvency Certificate) फॉर्म</span>
-                        <span class="lang-en">Solvency / Status Certificate Request</span>
-                        <span class="price-tag">₹100</span>
+            <form onsubmit="event.preventDefault(); alert('Registration Successful.');">
+                <div class="input-block">
+                    <label id="lblRegName">पूरा नाम</label>
+                    <div class="field-container">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <input type="text" class="custom-input" placeholder="Your Full Name" required>
                     </div>
                 </div>
-
-                <div class="rate-card">
-                    <div class="rate-header b-csc">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <h3 class="lang-hi">पहचान पत्र एवं जनकल्याण योजनाएं</h3>
-                            <h3 class="lang-en">Identity Cards & Welfare Schemes</h3>
-                        </div>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('जन आधार कार्ड नया नामांकन', 'सरकारी योजना कल्याण')">
-                        <span class="lang-hi">जन आधार कार्ड नया नामांकन</span>
-                        <span class="lang-en">Jan Aadhaar Card New Enrollment</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('जन आधार कार्ड संशोधन / नाम जोड़ना', 'सरकारी योजना कल्याण')">
-                        <span class="lang-hi">जन आधार कार्ड संशोधन / नाम जोड़ना</span>
-                        <span class="lang-en">Jan Aadhaar Correction & Name Addition</span>
-                        <span class="price-tag">₹40</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('नया राशन कार्ड आवेदन / संशोधन', 'सरकारी योजना कल्याण')">
-                        <span class="lang-hi">नया राशन कार्ड आवेदन / संशोधन</span>
-                        <span class="lang-en">New Ration Card Application / Changes</span>
-                        <span class="price-tag">₹50</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('आयुष्मान चिरंजीवी कार्ड प्रिंट आउट', 'स्वास्थ्य योजना कार्ड')">
-                        <span class="lang-hi">आयुष्मान चिरंजीवी कार्ड प्रिंट आउट</span>
-                        <span class="lang-en">Ayushman Chiranjeevi Health Card Print</span>
-                        <span class="price-tag">₹30</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('वृद्धावस्था / विधवा / विकलांग पेंशन ऑनलाइन आवेदन', 'सामाजिक सुरक्षा पेंशन कल्याण')">
-                        <span class="lang-hi">वृद्धावस्था / विधवा / विकलांग पेंशन ऑनलाइन</span>
-                        <span class="lang-en">Social Security Pension Apply (Old/Widow)</span>
-                        <span class="price-tag">₹50</span>
+                <div class="input-block">
+                    <label id="lblRegPhone">मोबाइल नंबर</label>
+                    <div class="field-container">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" class="custom-input" placeholder="10 Digit Number" required>
                     </div>
                 </div>
-
-                <div class="rate-card">
-                    <div class="rate-header b-tech">
-                        <i class="fas fa-file-invoice"></i>
-                        <div>
-                            <h3 class="lang-hi">अन्य ऑनलाइन फॉर्म एवं बैंकिंग</h3>
-                            <h3 class="lang-en">Other Forms & AEPS Banking</h3>
-                        </div>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('पुलिस चरित्र प्रमाण पत्र (Police Verification)', 'नागरिक सुरक्षा सेवा')">
-                        <span class="lang-hi">पुलिस चरित्र प्रमाण पत्र (Police Verification)</span>
-                        <span class="lang-en">Police Character Certificate Apply</span>
-                        <span class="price-tag">₹100</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('श्रमिक डायरी (Labour Card) नया पंजीकरण', 'श्रम कल्याण विभाग')">
-                        <span class="lang-hi">श्रमिक डायरी (Labour Card) नया पंजीकरण</span>
-                        <span class="lang-en">Labour Diary Registration / Application</span>
-                        <span class="price-tag">₹80</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाना', 'रसद विभाग खाद्य योजना')">
-                        <span class="lang-hi">खाद्य सुरक्षा योजना (NFSA) नाम जुड़वाना</span>
-                        <span class="lang-en">Food Security (NFSA) Inclusion Apply</span>
-                        <span class="price-tag">₹100</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('आधार कार्ड डाउनलोड एवं हाई-क्वालिटी प्रिंट', 'यूआईडीएआई आधार सेवा')">
-                        <span class="lang-hi">आधार कार्ड डाउनलोड एवं हाई-क्वालिटी प्रिंट</span>
-                        <span class="lang-en">Aadhaar Card Download & Color Print</span>
-                        <span class="price-tag">₹30</span>
-                    </div>
-                    <div class="rate-row" onclick="openServiceDetails('नकद निकासी / मनी ट्रांसफर (AEPS)', 'डिजिटल banking डेस्क')">
-                        <span class="lang-hi">नकद निकासी / मनी ट्रांसफर (AEPS)</span>
-                        <span class="lang-en">Cash Withdrawal / Aadhaar Banking</span>
-                        <span class="price-tag">नियमानुसार</span>
+                <div class="input-block">
+                    <label id="lblRegPass">पासवर्ड बनाएं</label>
+                    <div class="field-container">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" class="custom-input" placeholder="Min 6 characters" required>
                     </div>
                 </div>
-            </div>
-
-            <h2 class="section-title">
-                <i class="fas fa-download"></i>
-                <span class="lang-hi">ऑफलाइन फॉर्म डाउनलोड पोर्टल</span>
-                <span class="lang-en">Offline Forms Download Portal</span>
-            </h2>
-            <div class="forms-portal">
-                <div id="formsPortalList" class="forms-portal-grid">
-                    <a href="forms/mool_niwas_form.pdf" class="form-item" target="_blank">
-                        <i class="fas fa-file-pdf" style="color: #dc2626; font-size: 1.2rem;"></i>
-                        <span class="lang-hi">मूल निवास प्रमाण पत्र फॉर्म</span>
-                        <span class="lang-en">Mool Niwas Certificate Form</span>
-                    </a>
+                <button type="submit" class="pro-submit-btn" id="btnRegSubmit">रजिस्ट्रेशन पूरा करें</button>
+                <div class="switch-form-text">
+                    Already Registered? <a href="#" onclick="shutModal('registerBox'); launchModal('loginBox');">Login here</a>
                 </div>
-            </div>
-
-            <h2 class="section-title">
-                <i class="fas fa-newspaper"></i>
-                <span class="lang-hi">सरकारी रिजल्ट, वैकेंसियां एवं लाइव नोटिफिकेशन</span>
-                <span class="lang-en">Sarkari Result, Vacancies & Live Updates</span>
-            </h2>
-
-            <div class="sarkari-container">
-                <div class="sarkari-marquee-box">
-                    <span style="white-space: nowrap; background: #000; padding: 4px 10px; border-radius: 4px; font-size: 12px; letter-spacing: 0.5px;">
-                        <span class="lang-hi">लाइव अपडेट</span><span class="lang-en">LIVE NOTICES</span>
-                    </span>
-                    <marquee scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
-                        <a href="javascript:void(0)" onclick="openVacancyDetails('SSC GD Constable Online Form 2026 Open', 'Latest Job')">🔥 SSC GD Constable Online Form 2026 Apply Open <span class="blink-tag">New</span></a>
-                        <a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan Police Constable Recruitment Final Result Out', 'Result')">📢 Rajasthan Police Constable Recruitment Final Result Released</a>
-                        <a href="javascript:void(0)" onclick="openVacancyDetails('Railway RRB NTPC Under Graduate Exam Dates Announced', 'Notice')">⚡ Railway RRB NTPC Under Graduate Exam Dates Announcement</a>
-                        <a href="javascript:void(0)" onclick="openVacancyDetails('NTA CUET UG 2026 Re-Scheduled Admit Card Live', 'Admit Card')">🎓 NTA CUET UG 2026 Re-Scheduled Admit Card Download Live</a>
-                        <a href="javascript:void(0)" onclick="openVacancyDetails('UP Police Constable Exam Answer Key Out', 'Answer Key')">💼 UP Police Constable Competitive Exam Answer Key Out</a>
-                    </marquee>
-                </div>
-
-                <div class="sarkari-grid">
-                    <div class="sarkari-card">
-                        <div class="sarkari-card-header jobs-head">
-                            <i class="fas fa-briefcase"></i> 
-                            <span class="lang-hi">लेटेस्ट जॉब / गेट ऑनलाइन फॉर्म</span>
-                            <span class="lang-en">Get Online Form / Latest Jobs</span>
-                        </div>
-                        <ul class="sarkari-list">
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('SSC GD Constable Online Form 2026', 'Latest Job')">SSC GD Constable Online Form 2026 <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Railway RRB ALP Recruitment Online 2026', 'Latest Job')">Railway RRB ALP Recruitment Online 2026 <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPSC Civil Services IAS Pre Form 2026', 'Latest Job')">UPSC Civil Services IAS Pre Form 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan RPSC Senior Teacher Forms Open', 'Latest Job')">Rajasthan RPSC Senior Teacher Forms Open</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPSSSC Lower PCS Recruitment (2285 Posts)', 'Latest Job')">UPSSSC Lower PCS Recruitment (2285 Posts)</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('BSNL Junior Telecom Officer JTO Form 2026', 'Latest Job')">BSNL Junior Telecom Officer JTO Form 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('SBI 7150 Posts Apprentice Online Apply', 'Latest Job')">SBI 7150 Posts Apprentice Online Apply</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Anganwadi Various Post Bharti Form 2026', 'Latest Job')">Anganwadi Various Post Bharti Form 2026</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sarkari-card">
-                        <div class="sarkari-card-header admit-head">
-                            <i class="fas fa-id-badge"></i>
-                            <span class="lang-hi">प्रवेश पत्र / Admit Card</span>
-                            <span class="lang-en">Admit Card</span>
-                        </div>
-                        <ul class="sarkari-list">
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('NTA CUET UG 2026 Revised Admit Card', 'Admit Card')">NTA CUET UG 2026 Revised Admit Card <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UP Police Constable 2026 Hall Ticket', 'Admit Card')">UP Police Constable 2026 Hall Ticket <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('RBI Junior Engineer JE Admit Card', 'Admit Card')">RBI Junior Engineer JE Admit Card</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('UPPSC GIC Lecturer New Exam Admit Card', 'Admit Card')">UPPSC GIC Lecturer New Exam Admit Card</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('State Bank of India SBI CBO Admit Card', 'Admit Card')">State Bank of India SBI CBO Admit Card</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('CTET February Exam Admit Card Link', 'Admit Card')">CTET February Exam Admit Card Link</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Navy SSR Medical Exam Hall Ticket 2026', 'Admit Card')">Navy SSR Medical Exam Hall Ticket 2026</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Polytechnic JEECUP Admissions Admit Card', 'Admit Card')">Polytechnic JEECUP Admissions Admit Card</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sarkari-card">
-                        <div class="sarkari-card-header results-head">
-                            <i class="fas fa-poll-h"></i>
-                            <span class="lang-hi">परीक्षा परिणाम / Results</span>
-                            <span class="lang-en">Results Center</span>
-                        </div>
-                        <ul class="sarkari-list">
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Rajasthan Police Sipahi Final Result 2026', 'Result')">Rajasthan Police Sipahi Final Result 2026 <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('BSEB Bihar Board Class 10th Matric Result', 'Result')">BSEB Bihar Board Class 10th Matric Result <span class="blink-tag">New</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('Railway RRB Technician Grade III Result', 'Result')">Railway RRB Technician Grade III Result</a></li>
-                            <li><a href="javascript:void(0)" onclick="openVacancyDetails('SSC Delhi Police Head Constable Final Result', 'Result')">SSC Delhi Police Head Constable Final Result</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
-    <footer>
-        <p>© 2026 NK डिजिटल हब, खण्डार। सर्वाधिकार सुरक्षित।</p>
-    </footer>
-
+    <!-- LANGUAGE CORE ENGINE -->
     <script>
-        function setLanguage(lang) {
-            if(lang === 'hi') {
-                document.body.className = "lang-hi-active";
-                document.getElementById('btn-lang-hi').style.background = "var(--secondary)";
-                document.getElementById('btn-lang-hi').style.color = "var(--primary)";
-                document.getElementById('btn-lang-en').style.background = "transparent";
-                document.getElementById('btn-lang-en').style.color = "white";
-            } else {
-                document.body.className = "lang-en-active";
-                document.getElementById('btn-lang-en').style.background = "var(--secondary)";
-                document.getElementById('btn-lang-en').style.color = "var(--primary)";
-                document.getElementById('btn-lang-hi').style.background = "transparent";
-                document.getElementById('btn-lang-hi').style.color = "white";
+        let currentLang = 'HI';
+
+        const contentData = {
+            EN: {
+                title: "NK Cyber Cafe Wala",
+                tagline: "E-Mitra, CSC, Printing Press & Computer Clinic, Khandar",
+                desc: "The most trusted and reliable technical & online solution hub of Khandar region. Specialized in government & non-government online applications, premium quality flex printing, and computer repair works.",
+                langBtnText: "<i class='fa-solid fa-language'></i> Switch to हिंदी",
+                loginHead: "Official Secure Login",
+                regHead: "Portal Registration",
+                lblUser: "Email / Username",
+                lblPass: "Password",
+                lblRegName: "Full Name",
+                lblRegPhone: "Mobile Number",
+                lblRegPass: "Create Password",
+                btnLoginSubmit: "Access Dashboard",
+                btnRegSubmit: "Register Now"
+            },
+            HI: {
+                title: "NK Cyber Cafe Wala",
+                tagline: "ई-मित्र, सीएससी, PRINTING PRESS एवं कंप्यूटर क्लीनिक, खण्डार",
+                desc: "खण्डार क्षेत्र का सबसे भरोसेमंद एवं विश्वसनीय तकनीकी व ऑनलाइन समाधान केंद्र। सभी सरकारी एवं गैर-सरकारी ऑनलाइन फॉर्म, उच्च गुणवत्ता फ्लेक्स प्रिंटिंग, एवं कंप्यूटर रिपेयरिंग समाधान।",
+                langBtnText: "<i class='fa-solid fa-language'></i> Switch to English",
+                loginHead: "यूजर लॉगिन",
+                regHead: "नया रजिस्ट्रेशन",
+                lblUser: "ईमेल / यूजरनाम",
+                lblPass: "पासवर्ड",
+                lblRegName: "पूरा नाम",
+                lblRegPhone: "मोबाइल नंबर",
+                lblRegPass: "पासवर्ड बनाएं",
+                btnLoginSubmit: "डैशबोर्ड लॉगिन करें",
+                btnRegSubmit: "रजिस्ट्रेशन पूरा करें"
             }
-        }
-        
-        function openServiceDetails(service, category) {
-            alert("Service Details: " + service + " (" + category + ")");
+        };
+
+        function toggleSystemLanguage() {
+            const btn = document.getElementById('langBtn');
+            if (currentLang === 'HI') {
+                currentLang = 'EN';
+                btn.classList.add('lang-active');
+            } else {
+                currentLang = 'HI';
+                btn.classList.remove('lang-active');
+            }
+
+            document.getElementById('mainTitle').innerText = contentData[currentLang].title;
+            document.getElementById('tagline').innerText = contentData[currentLang].tagline;
+            document.getElementById('mainDesc').innerText = contentData[currentLang].desc;
+            btn.innerHTML = contentData[currentLang].langBtnText;
+            
+            document.getElementById('loginHeading').innerText = contentData[currentLang].loginHead;
+            document.getElementById('regHeading').innerText = contentData[currentLang].regHead;
+            document.getElementById('lblUser').innerText = contentData[currentLang].lblUser;
+            document.getElementById('lblPass').innerText = contentData[currentLang].lblPass;
+            document.getElementById('lblRegName').innerText = contentData[currentLang].lblRegName;
+            document.getElementById('lblRegPhone').innerText = contentData[currentLang].lblRegPhone;
+            document.getElementById('lblRegPass').innerText = contentData[currentLang].lblRegPass;
+            document.getElementById('btnLoginSubmit').innerText = contentData[currentLang].btnLoginSubmit;
+            document.getElementById('btnRegSubmit').innerText = contentData[currentLang].btnRegSubmit;
         }
 
-        function openVacancyDetails(title, type) {
-            alert("Vacancy Notice: " + title + " [" + type + "]");
+        function launchModal(targetId) {
+            document.getElementById(targetId).classList.add('show');
+            document.body.style.overflow = 'hidden';
         }
 
-        function scrollToBooking() {
-            alert("Booking Engine initialized.");
+        function shutModal(targetId) {
+            document.getElementById(targetId).classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(e) {
+            if (e.target.classList.contains('modal-blur-overlay')) {
+                e.target.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
         }
     </script>
 </body>
